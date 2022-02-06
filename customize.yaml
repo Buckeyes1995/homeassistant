@@ -1,0 +1,68 @@
+# Cameras
+camera.blink_front_porch_left:
+  friendly_name: Front Porch Camera (Left)
+camera.blink_front_porch_right:
+  friendly_name: Front Porch Camera (Right)
+camera.blink_side_entrance:
+  friendly_name: Side Entrance Camera 
+camera.blink_deck:
+  friendly_name: Deck Camera  
+camera.front_door:
+  friendly_name: Front Door Camera
+
+
+# Batteries
+binary_sensor.blink_front_porch_left_battery:
+  friendly_name: Front Porch Battery Status (Left)
+binary_sensor.blink_front_porch_right_battery:
+  friendly_name: Front Porch Battery Status (Right) 
+binary_sensor.blink_side_entrance_battery:
+  friendly_name: Side Entrance Battery Status
+binary_sensor.blink_deck_battery:
+  friendly_name: Deck Battery Status
+sensor.front_door_battery:
+  friend_name: Front Door Battery Status
+
+# Armed Status
+binary_sensor.blink_front_porch_left_camera_armed:
+  friendly_name: Front Porch Camera Armed (Left)
+binary_sensor.blink_front_porch_right_camera_armed:
+  friendly_name: Front Porch Camera Armed (Right)   
+binary_sensor.blink_side_entrance_camera_armed:
+  friendly_name: Side Entrance Camera Armed
+binary_sensor.blink_deck_camera_armed:
+  friendly_name: Deck Camera Armed
+
+
+# Motion Detected
+binary_sensor.blink_front_porch_left_motion_detected:
+  friendly_name: Front Porch Motion Detected (Left)
+binary_sensor.blink_front_porch_right_motion_detected:
+  friendly_name: Front Porch Motion Detected (Right)
+binary_sensor.blink_side_entrance_motion_detected:
+  friendly_name: Side Entrance Motion Detected
+binary_sensor.blink_deck_motion_detected:
+  friendly_name: Deck Motion Detected
+binary_sensor.front_door_motion:
+  friendly_name: Front Door Motion Detected
+
+# Temperature
+sensor.blink_front_porch_left_temperature:
+  friendly_name: Front Porch Temperature (Left) 
+sensor.blink_front_porch_right_temperature:
+  friendly_name: Front Porch Temperature (Right)
+sensor.blink_side_entrance_temperature:
+  friendly_name:  Side Entrance Temperataure
+sensor.blink_deck_temperature:
+  friendly_name: Deck Temperature
+
+
+# Alarms Armed
+binary_sensor.blink_front_porch_left_camera_armed:
+  friendly_name: Front Porch Camera Armed (Left)
+binary_sensor.blink_front_porch_right_camera_armed:
+  friendly_name: Front Porch Camera Armed (Right)
+binary_sensor.blink_side_entrance_camera_armed:
+  friendly_name: Side Entrance Camera Armed Status
+binary_sensor.blink_deck_camera_armed:
+  friendly_name: DeckCamera Armed Status Test

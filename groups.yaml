@@ -1,0 +1,119 @@
+#########################################################################
+###                                BLINK GROUPS                       ###   
+#########################################################################
+blink_front_porch_left:
+  name: Blink Left Front Porch Group
+  entities:
+    - camera.blink_front_porch_left
+    - binary_sensor.blink_front_porch_left_battery
+    - binary_sensor.blink_front_porch_left_camera_armed
+    - binary_sensor.blink_front_porch_left_motion_detected
+    - sensor.blink_front_porch_left_temperature
+    - sensor.blink_front_porch_left_wifi_signal
+
+blink_front_porch_right:
+  name: Blink Right Front Porch Group
+  entities:
+    - camera.blink_front_porch_right
+    - binary_sensor.blink_front_porch_right_battery
+    - binary_sensor.blink_front_porch_right_camera_armed
+    - binary_sensor.blink_front_porch_right_motion_detected
+    - sensor.blink_front_porch_right_temperature
+    - sensor.blink_front_porch_right_wifi_signal
+
+blink_side_entrance:
+  name: Blink Side Entrance Group
+  entities:
+    - camera.blink_side_entrance
+    - binary_sensor.blink_side_entrance_battery
+    - binary_sensor.blink_side_entrance_camera_armed
+    - binary_sensor.blink_side_entrance_motion_detected
+    - sensor.blink_side_entrance_temperature
+    - sensor.blink_side_entrance_wifi_signal    
+
+blink_deck_:
+  name: Blink Deck Group
+  entities:
+    - camera.blink_deck
+    - binary_sensor.blink_deck_battery
+    - binary_sensor.blink_deck_camera_armed
+    - binary_sensor.blink_deck_motion_detected
+    - sensor.blink_deck_temperature
+    - sensor.blink_deck_wifi_signal        
+
+motion_detector:
+  name: Motion Detector Group
+  entities:
+    - binary_sensor.blink_front_porch_left_motion_detected
+    - binary_sensor.blink_front_porch_right_motion_detected
+    - binary_sensor.blink_side_entrance_motion_detected
+    - binary_sensor.blink_deck_motion_detected
+    - binary_sensor.front_door_motion
+
+battery:
+  name: Battery Group
+  entities:
+    - binary_sensor.blink_front_porch_left_battery
+    - binary_sensor.blink_front_porch_right_battery
+    - binary_sensor.blink_side_entrance_battery
+    - binary_sensor.blink_deck_battery
+    - sensor.front_door_battery
+
+wifi_singal_strength:
+  name: WiFi Signal Strength Group
+  entities:
+    - sensor.blink_front_porch_left_wifi_signal
+    - sensor.blink_front_porch_right_wifi_signal
+    - sensor.blink_side_entrance_wifi_signal 
+    - sensor.blink_deck_wifi_signal
+    - sensor.downstairs_wifi_signal_strength     
+    - sensor.back_side_door_wifi_signal_strength
+    - sensor.front_door_wifi_signal_strength
+
+temperature:
+  name: Temperature Group
+  entities:
+    - sensor.blink_front_porch_left_temperature
+    - sensor.blink_front_porch_right_temperature
+    - sensor.blink_side_entrance_temperature 
+    - sensor.blink_deck_temperature   
+
+alarms_armed:
+  name: Armed Alarms Group
+  entities: 
+    - binary_sensor.blink_front_porch_left_camera_armed
+    - binary_sensor.blink_front_porch_right_camera_armed
+    - binary_sensor.blink_side_entrance_camera_armed
+    - binary_sensor.blink_deck_camera_armed
+
+
+#########################################################################
+###                                RING GROUPS                        ###   
+#########################################################################
+ring_front_door:
+  name: Ring Front Door Group
+  entities:
+    - camera.front_door
+    - sensor.front_door_battery
+    - sensor.front_door_last_activity
+    - sensor.front_door_last_ding
+    - binary_sensor.front_door_ding
+    - sensor.front_door_last_motion
+    - binary_sensor.front_door_motion
+    - sensor.front_door_volume
+    - sensor.front_door_wifi_signal_category
+    - sensor.front_door_wifi_signal_strength
+
+ring_living_room_chime:
+  name: Ring Living Room Chime Group
+  entities:
+    - sensor.downstairs_volume
+    - sensor.downstairs_wifi_signal_category
+    - sensor.downstairs_wifi_signal_strength
+
+ring_living_room_chime:
+  name: Ring Living Room Chime Group
+  entities:
+    - sensor.back_side_door_volume
+    - sensor.back_side_door_wifi_signal_category
+    - sensor.back_side_door_wifi_signal_strength
