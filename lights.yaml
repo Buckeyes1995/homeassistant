@@ -1,0 +1,9 @@
+# FRONT PORCH
+- platform: switch
+  name: Fan and Lights Switch - Front Porch
+  entity_id: switch.fan_and_light_switch_front_porch
+
+# FRONT OFFICE
+- platform: switch
+  name: Fan and Light Switch - Front Office
+  entity_id: switch.fan_and_light_switch_front_office
