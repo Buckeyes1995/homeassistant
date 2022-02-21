@@ -10,7 +10,6 @@ camera.blink_deck:
 camera.front_door:
   friendly_name: Front Door Camera
 
-
 # Batteries
 binary_sensor.blink_front_porch_left_battery:
   friendly_name: Front Porch Battery Status (Left)
@@ -33,8 +32,7 @@ binary_sensor.blink_side_entrance_camera_armed:
 binary_sensor.blink_deck_camera_armed:
   friendly_name: Deck Camera Armed
 
-
-# Motion Detected
+# Motion Detected / Occupancy
 binary_sensor.blink_front_porch_left_motion_detected:
   friendly_name: Front Porch Motion Detected (Left)
 binary_sensor.blink_front_porch_right_motion_detected:
@@ -45,6 +43,10 @@ binary_sensor.blink_deck_motion_detected:
   friendly_name: Deck Motion Detected
 binary_sensor.front_door_motion:
   friendly_name: Front Door Motion Detected
+binary_sensor.main_floor_occupancy:
+  friendly_name: Main Floor Occupied
+binary_sensor.main_floor_occupancy:
+  friendly_name: Master Bedroom Occupied
 
 # Temperature
 sensor.blink_front_porch_left_temperature:
@@ -55,7 +57,16 @@ sensor.blink_side_entrance_temperature:
   friendly_name:  Side Entrance Temperataure
 sensor.blink_deck_temperature:
   friendly_name: Deck Temperature
+sensor.main_floor_temperature:
+  friendly_name: Main Floor Temperature
+sensor.bedroom_temperature:
+  friendly_name: Master Bedroom Temperature
 
+# Humidity
+sensor.main_floor_humidity:
+  friendly_name: Main Floor Humidity
+sensor.bedroom_humidity:
+  friendly_name: Master Bedroom Humidity
 
 # Alarms Armed
 binary_sensor.blink_front_porch_left_camera_armed:
@@ -66,3 +77,17 @@ binary_sensor.blink_side_entrance_camera_armed:
   friendly_name: Side Entrance Camera Armed Status
 binary_sensor.blink_deck_camera_armed:
   friendly_name: DeckCamera Armed Status Test
+
+# Thermostats
+climate.main_floor:
+  friendly_name: Main Floor Thermostat
+climate.bedroom:
+  friendly_name: Master Bedroom Thermostat
+
+#Weather
+weather.main_floor: 
+  friendly_name: Fort Worth Weather Forecast
+
+#Alarm Panels
+alarm_control_panel.blink_home:
+  friendly_name: Blink Camera Control
