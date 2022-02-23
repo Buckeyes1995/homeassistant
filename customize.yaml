@@ -76,7 +76,7 @@ binary_sensor.blink_front_porch_right_camera_armed:
 binary_sensor.blink_side_entrance_camera_armed:
   friendly_name: Side Entrance Camera Armed Status
 binary_sensor.blink_deck_camera_armed:
-  friendly_name: DeckCamera Armed Status Test
+  friendly_name: Deck Camera Armed Status
 
 # Thermostats
 climate.main_floor:
@@ -91,3 +91,11 @@ weather.main_floor:
 #Alarm Panels
 alarm_control_panel.blink_home:
   friendly_name: Blink Camera Control
+
+#lights
+light.floor_lamp_living_room:
+  friendly_name: Floor Lamp - Living Room
+light.overhead_lights_dimmer_switch_front_office:
+  friendly_name: Overhead Lights - Front Office
+light.overhead_lights_dimmer_switch_living_room:
+  friendly_name: Overhead Lights - Living Room
