@@ -86,7 +86,8 @@ climate.bedroom:
 
 #Weather
 weather.main_floor: 
-  friendly_name: Fort Worth Weather Forecast
+  friendly_name: Fort Worth
+   Weather Forecast
 
 #Alarm Panels
 alarm_control_panel.blink_home:
@@ -99,3 +100,23 @@ light.overhead_lights_dimmer_switch_front_office:
   friendly_name: Overhead Lights - Front Office
 light.overhead_lights_dimmer_switch_living_room:
   friendly_name: Overhead Lights - Living Room
+light.overhead_lights_dimmer_switch_kitchen:
+  friendly_name: Overhead Lights - Kitchen
+light.deck_light:
+  friendly_name: Deck Light
+light.overhead_lights_hallway:
+  friendly_name: Overhead Lights - Hallway
+light.overhead_light_hallway_coat_closet:
+  friendly_name: Overhead Light - Hallway Coat Closet
+light.fan_and_light_master_bedroom:
+  friendly_name: Fan and Light - Master Bedroom
+light.overhead_lights_master_bedroom:
+  friendly_name: Overhead Lights - Master Bedroom
+light.overhead_lights_master_bedroom:
+  friendly_name: Overhead Lights - Master Bedroom
+light.fan_and_overhead_light_powder_room:
+  friendly_name: Fan and Overhead Light - Powder Room
+light.vanity_light_powder_room:
+  friendly_name: Vanity Light - Powder Room
+light.pendant_lights_kitchen:
+  friendly_name: Pendant Lights - Kitchen
