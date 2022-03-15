@@ -1,60 +1,52 @@
 # FRONT PORCH
 - platform: switch
-  name: Fans and Lights - Front Porch
   entity_id: switch.fan_and_light_switch_front_porch
 
 # FRONT OFFICE
 - platform: switch
-  name: Fan and Light - Front Office
   entity_id: switch.fan_and_light_switch_front_office
 
 # KITCHEN
 - platform: switch
-  name: Pendant Lights - Kitchen
   entity_id: switch.pendant_light_switch_kitchen
 
 # HALLWAY
 - platform: switch
-  name: Overhead Lights - Hallway
   entity_id: switch.overhead_lights_hallway
-
 - platform: switch
-  name: Overhead Light - Hallway Coat Closet 
   entity_id: switch.overhead_light_hallway_coat_closet
-
 - platform: switch
-  name: Deck Light
   entity_id: switch.light_deck
 
 # POWDER ROOM
 - platform: switch
-  name: Vanity Light - Powder Room
   entity_id: switch.vanity_light_powder_room
-
 - platform: switch
-  name: Fan and Overhead Light - Powder Room
   entity_id: switch.fan_and_overhead_light_powder_room
 
 # MASTER BEDROOM
 - platform: switch
-  name: Overhead Lights - Master Bedroom
   entity_id: switch.overhead_lights_scene_controller_master_bedroom
-
 - platform: switch
-  name: Fan and Light - Master Bedroom
   entity_id: switch.fan_and_light_master_bedroom
-
 - platform: switch
-  name: Tammy's Bed Lamp - Master Bedroom
   entity_id: switch.bed_lamp_tammy_master_bedroom
-
 - platform: switch
-  name: Jim's Bed Lamp - Master Bedroom
   entity_id: switch.bed_lamp_jim_master_bedroom  
 
-- platform: group
-  name: Lamp's Group
-  entities:
-  - light.tammy_s_bed_lamp_master_bedroom
-  - light.jim_s_bed_lamp_master_bedroom
-  
+# BACK OFFICE
+- platform: switch
+  entity_id: switch.fan_and_light_switch_back_office
+- platform: switch
+  entity_id: switch.closet_light_back_office
+
+# MASTER BATHROOM
+- platform: switch
+  entity_id: switch.exhaust_fan_master_bathroom
+- platform: switch
+  entity_id: switch.left_vanity_lights_master_bathroom
+- platform: switch
+  entity_id: switch.right_vanity_lights_master_bathroom
+
+  #- platform: switch
+#  entity_id: switch.overhead_lights_mbrtest_fan

@@ -98,13 +98,6 @@ ring_living_room_chime:
     - sensor.downstairs_wifi_signal_category
     - sensor.downstairs_wifi_signal_strength
 
-ring_living_room_chime:
-  name: Ring Living Room Chime Group
-  entities:
-    - sensor.back_side_door_volume
-    - sensor.back_side_door_wifi_signal_category
-    - sensor.back_side_door_wifi_signal_strength
-
 #########################################################################
 ###                              ECOBEE GROUPS                        ###   
 #########################################################################
@@ -168,3 +161,70 @@ blink_deck_:
     - binary_sensor.blink_deck_motion_detected
     - sensor.blink_deck_temperature
     - sensor.blink_deck_wifi_signal        
+
+#########################################################################
+###                                LIGHT GROUPS                       ###   
+#########################################################################
+front_office_light_group:
+  name: Front Office Lights
+  entities: 
+    - light.fan_and_light_switch_front_office
+    - light.overhead_lights_dimmer_switch_front_office
+    - light.desk_light_front_office
+
+living_room_light_group:
+  name: Living Room Lights
+  entities: 
+    - light.overhead_lights_dimmer_switch_living_room
+    - light.floor_lamp_living_room
+
+kitchen_light_group:
+  name: Kitchen Lights
+  entities: 
+    - light.overhead_lights_dimmer_switch_kitchen
+    - light.pendant_lights_kitchen
+
+hallwawy_light_group:
+  name: Hallway Lights
+  entities: 
+    - light.overhead_lights_hallway
+    - light.overhead_light_hallway_coat_closet
+
+powder_room_light_group:
+  name: Powder Room Lights
+  entities: 
+    - light.vanity_light_powder_room
+    - light.fan_and_overhead_light_powder_room
+
+back_office_light_group:
+  name: Back Office Lights
+  entities: 
+    - light.overhead_lights_dimmer_switch_back_office
+    - light.fan_and_light_back_office
+    - light.closet_light_back_office
+
+master_bedroom_light_group:
+  name: Master Bedroom Lights
+  entities: 
+    - light.overhead_lights_master_bedroom
+    - light.fan_and_light_master_bedroom
+    - light.bed_night_light_tammy_master_bedroom
+    - light.tammy_s_bed_lamp_master_bedroom
+    - light.night_light_jim_master_bedroom
+    - light.tammy_s_bed_lamp_master_bedroom
+
+master_bedroom_bed_lamp_group:
+  name: Lamps
+  entities:
+    - light.bed_night_light_tammy_master_bedroom
+    - light.tammy_s_bed_lamp_master_bedroom
+    - light.night_light_jim_master_bedroom
+    - light.tammy_s_bed_lamp_master_bedroom
+
+#master_batheroom_group:
+#  name: Master Bathroom Lights
+#  entities:
+#    - light.light_switch
+#    - light.light_switch_2
+#    - light.light_switch_3
+#    - light.light_switch_4

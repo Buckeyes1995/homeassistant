@@ -45,8 +45,8 @@ binary_sensor.front_door_motion:
   friendly_name: Front Door Motion Detected
 binary_sensor.main_floor_occupancy:
   friendly_name: Main Floor Occupied
-binary_sensor.main_floor_occupancy:
-  friendly_name: Master Bedroom Occupied
+#binary_sensor.main_floor_occupancy:
+#  friendly_name: Master Bedroom Occupied
 
 # Temperature
 sensor.blink_front_porch_left_temperature:
@@ -69,14 +69,14 @@ sensor.bedroom_humidity:
   friendly_name: Master Bedroom Humidity
 
 # Alarms Armed
-binary_sensor.blink_front_porch_left_camera_armed:
-  friendly_name: Front Porch Camera Armed (Left)
-binary_sensor.blink_front_porch_right_camera_armed:
-  friendly_name: Front Porch Camera Armed (Right)
-binary_sensor.blink_side_entrance_camera_armed:
-  friendly_name: Side Entrance Camera Armed Status
-binary_sensor.blink_deck_camera_armed:
-  friendly_name: Deck Camera Armed Status
+#binary_sensor.blink_front_porch_left_camera_armed:
+ # friendly_name: Front Porch Camera Armed (Left)
+#binary_sensor.blink_front_porch_right_camera_armed:
+#  friendly_name: Front Porch Camera Armed (Right)
+#binary_sensor.blink_side_entrance_camera_armed:
+#  friendly_name: Side Entrance Camera Armed Status
+#binary_sensor.blink_deck_camera_armed:
+#  friendly_name: Deck Camera Armed Status
 
 # Thermostats
 climate.main_floor:
@@ -86,37 +86,67 @@ climate.bedroom:
 
 #Weather
 weather.main_floor: 
-  friendly_name: Fort Worth
-   Weather Forecast
+  friendly_name: Fort Worth Weather Forecast
 
 #Alarm Panels
 alarm_control_panel.blink_home:
   friendly_name: Blink Camera Control
 
-#lights
-light.floor_lamp_living_room:
-  friendly_name: Floor Lamp - Living Room
+#Lights
+#Front Porch
+light.fan_and_lights_switch_front_porch:
+  friendly_name: Front Porch Fans and Lights
+#Front Office
+light.fan_and_light_switch_front_office:
+  friendly_name: Front Office Fan Light
 light.overhead_lights_dimmer_switch_front_office:
-  friendly_name: Overhead Lights - Front Office
+  friendly_name: Front Office Overhead Lights
+light.desk_light_front_office:
+  friendly_name: Front Office Table Light
+#Living Room
 light.overhead_lights_dimmer_switch_living_room:
-  friendly_name: Overhead Lights - Living Room
+  friendly_name: Living Room Overhead Lights
+light.floor_lamp_living_room:
+ friendly_name: Living Room Floor Lamp
+#Kitchen
 light.overhead_lights_dimmer_switch_kitchen:
-  friendly_name: Overhead Lights - Kitchen
+  friendly_name: Kitchen Overhead Lights
+light.pendant_lights_kitchen:
+  friendly_name: Kitchen Pendant Lights
+#Dining Room
+#Laundry Room
+#Side Porch
+#Hallway
+light.overhead_lights_hallway:
+  friendly_name: Hallway Overhead Lights
+light.overhead_light_hallway_coat_closet:
+  friendly_name: Hallway Coat Closet Light
+#Deck
 light.deck_light:
   friendly_name: Deck Light
-light.overhead_lights_hallway:
-  friendly_name: Overhead Lights - Hallway
-light.overhead_light_hallway_coat_closet:
-  friendly_name: Overhead Light - Hallway Coat Closet
-light.fan_and_light_master_bedroom:
-  friendly_name: Fan and Light - Master Bedroom
-light.overhead_lights_master_bedroom:
-  friendly_name: Overhead Lights - Master Bedroom
-light.overhead_lights_master_bedroom:
-  friendly_name: Overhead Lights - Master Bedroom
+#Back Office
+light.fan_and_light_back_office:
+  friendly_name: Back Office Fan Light
+light.closet_light_back_office:
+  friendly_name: Back Office Closet Light
+#Power Room
 light.fan_and_overhead_light_powder_room:
-  friendly_name: Fan and Overhead Light - Powder Room
+  friendly_name: Powder Room Fan and Overhead Light
 light.vanity_light_powder_room:
-  friendly_name: Vanity Light - Powder Room
-light.pendant_lights_kitchen:
-  friendly_name: Pendant Lights - Kitchen
+  friendly_name: Powder Room Vanity Light
+#Master Bedroom
+light.fan_and_light_master_bedroom:
+  friendly_name: Master Bedroom Fan and Light
+light.overhead_lights_master_bedroom:
+  friendly_name: Master Bedroom Overhead Lights
+light.bed_night_light_tammy_master_bedroom:
+  friendly_name: Tammy's Nightlight
+light.bed_night_light_jim_master_bedroom:
+  friendly_name: Jims's Nightlight
+switch.bed_lamp_tammy_master_bedroom:
+  friendly_name: Tammy's Bed Lamp
+switch.bed_lamp_jim_master_bedroom:
+  friendly_name: Jim's Bed Lamp
+#Master Bathroom
+
+
