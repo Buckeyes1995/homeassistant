@@ -1,0 +1,63 @@
+- id: '1649522735572'
+  name: Goodnight
+  entities:
+    switch.bed_lamp_jim_master_bedroom:
+      friendly_name: Jim's Bed Lamp
+      state: 'off'
+    light.night_light_jim_master_bedroom:
+      supported_color_modes:
+      - hs
+      friendly_name: Jim's Nightlight
+      supported_features: 17
+      state: 'off'
+    switch.bed_lamp_tammy_master_bedroom:
+      friendly_name: Tammy's Bed Lamp
+      state: 'off'
+    light.bed_night_light_tammy_master_bedroom:
+      supported_color_modes:
+      - hs
+      friendly_name: Tammy's Nightlight
+      supported_features: 17
+      state: 'off'
+    switch.overhead_lights_scene_controller_master_bedroom:
+      friendly_name: Overhead Lights - Master Bedroom
+      state: 'off'
+    switch.closet_light_back_office:
+      friendly_name: Closet Light
+      state: 'off'
+    light.artemis:
+      supported_color_modes:
+      - brightness
+      friendly_name: Artemis
+      supported_features: 1
+      state: 'off'
+    fan.artemis:
+      preset_modes:
+      - Breeze
+      friendly_name: Artemis
+      supported_features: 5
+      direction: forward
+      percentage: 83
+      percentage_step: 16.666666666666668
+      state: 'on'
+    alarm_control_panel.blink_home:
+      code_format:
+      changed_by:
+      code_arm_required: true
+      icon: mdi:security
+      friendly_name: Blink Camera Control
+      supported_features: 2
+      name: Home
+      id: 36227
+      network_id: 21249
+      serial: '240532446'
+      status: online
+      region_id: u001
+      state: armed_away
+    light.deck_light:
+      supported_color_modes:
+      - onoff
+      friendly_name: Deck Light
+      supported_features: 0
+      state: 'off'
+  icon: mdi:sleep

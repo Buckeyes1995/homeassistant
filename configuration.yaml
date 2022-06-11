@@ -1,6 +1,7 @@
 
 homeassistant:
   customize: !include customize.yaml
+  packages: !include_dir_named packages/
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
@@ -9,8 +10,25 @@ default_config:
 tts:
   - platform: google_translate
 
+media_player:
+  - platform: androidtv
+    host: 10.0.0.63
+    name: "Living Room Super Shield"
+    adb_server_ip: 10.0.0.150
+    adb_server_port: 5037
+
+weather:
+  - platform: pirateweather
+    api_key: !secret pirate_weather_api_key
+
+hydrawise:
+  access_token: !secret hydrawise_api_key
+
 automation: !include automations.yaml
+binary_sensor: !include binary_sensors.yaml
 group: !include groups.yaml
 light: !include lights.yaml
+sensor: !include sensors.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+switch: !include switches.yaml

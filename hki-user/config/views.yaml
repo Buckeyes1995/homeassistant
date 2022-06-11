@@ -1,0 +1,4 @@
+views: # NEVER REMOVE THIS LINE
+  !include_dir_merge_named ../views
+# Default views (you can edit them!)
+

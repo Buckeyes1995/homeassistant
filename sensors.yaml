@@ -1,0 +1,7 @@
+- platform: hydrawise
+
+- platform: average
+  name: Average House Temperature
+  entities:
+    - sensor.main_floor_temperature
+    - sensor.bedroom_temperature

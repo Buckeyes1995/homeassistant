@@ -1,3 +1,4 @@
+
 motion_detector:
   name: Motion Detector Group
   entities:
@@ -6,6 +7,12 @@ motion_detector:
     - binary_sensor.blink_side_entrance_motion_detected
     - binary_sensor.blink_deck_motion_detected
     - binary_sensor.front_door_motion
+
+motion_detector_front_porch:
+  name: Motion Detector Front Porch Grouop
+  entities:
+    - binary_sensor.blink_front_porch_left_motion_detected
+    - binary_sensor.blink_front_porch_right_motion_detected
 
 battery:
   name: Battery Group
@@ -184,7 +191,7 @@ kitchen_light_group:
     - light.overhead_lights_dimmer_switch_kitchen
     - light.pendant_lights_kitchen
 
-hallwawy_light_group:
+hallway_light_group:
   name: Hallway Lights
   entities: 
     - light.overhead_lights_hallway

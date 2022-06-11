@@ -49,24 +49,26 @@ binary_sensor.main_floor_occupancy:
 #  friendly_name: Master Bedroom Occupied
 
 # Temperature
+sensor.average_house_temperature:
+  friendly_name: Average House
 sensor.blink_front_porch_left_temperature:
-  friendly_name: Front Porch Temperature (Left) 
+  friendly_name: Front Porch Left
 sensor.blink_front_porch_right_temperature:
-  friendly_name: Front Porch Temperature (Right)
+  friendly_name: Front Porch Right
 sensor.blink_side_entrance_temperature:
-  friendly_name:  Side Entrance Temperataure
+  friendly_name:  Side Entrance
 sensor.blink_deck_temperature:
-  friendly_name: Deck Temperature
+  friendly_name: Deck
 sensor.main_floor_temperature:
-  friendly_name: Main Floor Temperature
+  friendly_name: Main Floor
 sensor.bedroom_temperature:
-  friendly_name: Master Bedroom Temperature
+  friendly_name: Master Bedroom
 
 # Humidity
 sensor.main_floor_humidity:
-  friendly_name: Main Floor Humidity
+  friendly_name: Main Floor 
 sensor.bedroom_humidity:
-  friendly_name: Master Bedroom Humidity
+  friendly_name: Master Bedroom
 
 # Alarms Armed
 #binary_sensor.blink_front_porch_left_camera_armed:
@@ -80,9 +82,9 @@ sensor.bedroom_humidity:
 
 # Thermostats
 climate.main_floor:
-  friendly_name: Main Floor Thermostat
+  friendly_name: Main Floor
 climate.bedroom:
-  friendly_name: Master Bedroom Thermostat
+  friendly_name: Master Bedroom
 
 #Weather
 weather.main_floor: 
@@ -92,6 +94,18 @@ weather.main_floor:
 alarm_control_panel.blink_home:
   friendly_name: Blink Camera Control
 
+#Fans
+fan.fan_front_office:
+  friendly_name: Front Office Fan
+fan.fan_living_room:
+  friendly_name: Living Room Fan
+fan.fan_back_office:
+  friendly_name: Back Office Fan
+fan.fan_master_bedroom:
+  friendly_name: Bedroom Fan
+fan.fan_guest_bedroom:
+  friendly_name: Guest Bedroom Fan
+  
 #Lights
 #Front Porch
 light.fan_and_lights_switch_front_porch:
@@ -103,11 +117,13 @@ light.overhead_lights_dimmer_switch_front_office:
   friendly_name: Front Office Overhead Lights
 light.desk_light_front_office:
   friendly_name: Front Office Table Light
+
 #Living Room
 light.overhead_lights_dimmer_switch_living_room:
   friendly_name: Living Room Overhead Lights
 light.floor_lamp_living_room:
  friendly_name: Living Room Floor Lamp
+
 #Kitchen
 light.overhead_lights_dimmer_switch_kitchen:
   friendly_name: Kitchen Overhead Lights
@@ -129,6 +145,7 @@ light.fan_and_light_back_office:
   friendly_name: Back Office Fan Light
 light.closet_light_back_office:
   friendly_name: Back Office Closet Light
+
 #Power Room
 light.fan_and_overhead_light_powder_room:
   friendly_name: Powder Room Fan and Overhead Light
@@ -136,17 +153,24 @@ light.vanity_light_powder_room:
   friendly_name: Powder Room Vanity Light
 #Master Bedroom
 light.fan_and_light_master_bedroom:
-  friendly_name: Master Bedroom Fan and Light
+  friendly_name: Bedroom Fan and Light
 light.overhead_lights_master_bedroom:
-  friendly_name: Master Bedroom Overhead Lights
+  friendly_name: Bedroom Overhead Lights
 light.bed_night_light_tammy_master_bedroom:
   friendly_name: Tammy's Nightlight
 light.bed_night_light_jim_master_bedroom:
   friendly_name: Jims's Nightlight
 switch.bed_lamp_tammy_master_bedroom:
-  friendly_name: Tammy's Bed Lamp
+  friendly_name: Tammy's Lamp
 switch.bed_lamp_jim_master_bedroom:
-  friendly_name: Jim's Bed Lamp
-#Master Bathroom
+  friendly_name: Jim's Lamp
 
+#Master Bathroom
+light.left_vanity_lights_master_bathroom:
+  friendly_name: Left Vanity Lights
+light.right_vanity_lights_master_bathroom:
+  friendly_name: Right Vanity Lights
+light.overhead_lights_master_bathroom:
+  friendly_name: Master Bathroom Overhead Lights
+#Guest Bedroom
 

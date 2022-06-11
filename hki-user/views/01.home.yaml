@@ -1,0 +1,63 @@
+# Home
+  home:
+    title: greeting
+    show_in_navbar: true
+    show_in_menu: false
+    icon: mdi:home
+    layout:
+      layout_type: custom:horizontal-layout
+      layout:
+        card_margin: 4px 8px 8px
+        margin: 0px 8px
+    addons:
+      weather:
+        - title: hide
+          type: simple_weather
+          entity: weather.main_floor
+          city_name: Fort Worth
+      picture_elements:
+        - title: hide
+          square: true
+          view_layout:
+            column: 1
+          columns: 2
+          cards:
+            - image: /local/images/tammy_small.png
+              elements:
+                icon: mdi:floor-lamp
+       #       !include ../elements/frontpage-photo-stephanie.yaml
+            - image: /local/images/jim_small.png
+              elements:
+                icon: mdi:floor-lamp
+         #   elements:
+         #     !include ../elements/frontpage-photo-jimmy.yaml 
+      thermostat:
+      # Small Screens
+      - title: Thermostats
+        box_shadow: none
+        entities:
+          - entity: climate.main_floor
+            title: main_floor
+            icon: mdi:home
+            box_shadow: fancy
+          - entity: climate.bedroom
+            title: bedroom
+            icon: mdi:bed
+            box_shadow: default
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      # Larger Screens
+      - title: Thermostats
+        entities:
+          - entity: climate.main_floor
+            title: main_floor
+            icon: mdi:home
+          - entity: climate.bedroom
+            title: bedroom 
+            icon: mdi:bed
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 4  

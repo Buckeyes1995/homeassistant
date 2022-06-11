@@ -15,6 +15,8 @@
   entity_id: switch.overhead_lights_hallway
 - platform: switch
   entity_id: switch.overhead_light_hallway_coat_closet
+
+#DECK
 - platform: switch
   entity_id: switch.light_deck
 
@@ -42,11 +44,9 @@
 
 # MASTER BATHROOM
 - platform: switch
-  entity_id: switch.exhaust_fan_master_bathroom
-- platform: switch
   entity_id: switch.left_vanity_lights_master_bathroom
+  name: Left Vanity Lights
 - platform: switch
   entity_id: switch.right_vanity_lights_master_bathroom
-
-  #- platform: switch
-#  entity_id: switch.overhead_lights_mbrtest_fan
+- platform: switch
+  entity_id: switch.overhead_lights_master_bathroom

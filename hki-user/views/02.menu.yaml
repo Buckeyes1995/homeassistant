@@ -1,0 +1,12 @@
+# Menu
+  menu:
+    title: Menu
+    show_in_navbar: true
+    show_in_menu: false
+    subtitle: "[[[ return `HKI 5 v.${states['sensor.hki_current_version'].state}`; ]]]"
+    icon: mdi:apps
+    addons:
+      favorites:
+        - title: Favorites
+      menu:
+        - title: Menu
