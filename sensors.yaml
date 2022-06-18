@@ -5,3 +5,63 @@
   entities:
     - sensor.main_floor_temperature
     - sensor.bedroom_temperature
+
+- platform: template
+  sensors:
+    blind_state_sensor_front_officed_front:
+      value_template: >
+        {% if is_state('input_number.front_office_cover_front', '0.0') %}
+          Open
+        {% else %}
+          Closed
+        {% endif %}
+
+- platform: template
+  sensors:
+    blind_state_sensor_front_office_side:
+      value_template: >
+        {% if is_state('input_number.front_office_cover_side', '0.0') %}
+          Open
+        {% else %}
+          Closed
+        {% endif %}
+
+- platform: template
+  sensors:
+    blind_state_sensor_living_room_side_left:
+      value_template: >
+        {% if is_state('input_number.living_room_cover_side_left', '0.0') %}
+          Open
+        {% else %}
+          Closed
+        {% endif %}
+
+- platform: template
+  sensors:
+    blind_state_sensor_living_room_side_center:
+      value_template: >
+        {% if is_state('input_number.living_room_cover_side_center', '0.0') %}
+          Open
+        {% else %}
+          Closed
+        {% endif %}
+
+- platform: template
+  sensors:
+    blind_state_sensor_living_room_side_right:
+      value_template: >
+        {% if is_state('input_number.living_room_cover_side_right', '0.0') %}
+          Open
+        {% else %}
+          Closed
+        {% endif %}
+
+- platform: template
+  sensors:
+    blind_state_sensor_living_room_front:
+      value_template: >
+        {% if is_state('input_number.living_room_cover_front', '0.0') %}
+          Open
+        {% else %}
+          Closed
+        {% endif %}

@@ -1,1 +1,47 @@
-[]
+- alias: Blind Automation Front Office Front
+  trigger:
+    platform: state
+    entity_id: input_number.front_office_cover_front
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_front_office_front", "value1":"{{trigger.to_state.state | int}}"}
+      
+- alias: Blind Automation Front Office Side
+  trigger:
+    platform: state
+    entity_id: input_number.front_office_cover_side
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_front_office_side", "value1":"{{trigger.to_state.state | int}}"}
+
+- alias: Blind Automation Living Room Side - Left
+  trigger:
+    platform: state
+    entity_id: input_number.living_room_cover_side_left
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_living_room_side_left", "value1":"{{trigger.to_state.state | int}}"}
+
+- alias: Blind Automation Living Room Side - Center
+  trigger:
+    platform: state
+    entity_id: input_number.living_room_cover_side_center
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_living_room_side_center", "value1":"{{trigger.to_state.state | int}}"}
+
+- alias: Blind Automation Living Room Side - Right
+  trigger:
+    platform: state
+    entity_id: input_number.living_room_cover_side_right
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_living_room_side_right", "value1":"{{trigger.to_state.state | int}}"}
+
+- alias: Blind Automation Living Room Front
+  trigger:
+    platform: state
+    entity_id: input_number.living_room_cover_front
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_living_room_front", "value1":"{{trigger.to_state.state | int}}"}

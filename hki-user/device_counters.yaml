@@ -18,7 +18,7 @@ all_fan_entities:
     - fan.fan_front_office
     - fan.fan_back_office
     - fan.fan_guest_bedroom
-    
+
 # Window Sensors (This is used in the header badges, without this the header badge won't work)
 all_window_sensor_entities:
   entities:
@@ -30,6 +30,11 @@ all_door_sensor_entities:
 # Motion Sensors (This is used in the header badges, without this the header badge won't work)
 all_motion_sensor_entities:
   entities:
+    - binary_sensor.blink_deck_motion_detected
+    - binary_sensor.blink_front_porch_left_motion_detected
+    - binary_sensor.blink_front_porch_right_motion_detected
+    - binary_sensor.blink_side_entrance_motion_detected
+    - binary_sensor.front_door_motion
 
 # All Detectors (smoke/gas/fire etc)
 all_detector_entities:
@@ -42,8 +47,44 @@ all_binary_sensor_entities:
 # All Lights
 all_light_entities:
   entities:
+    # Front Office
+    - light.overhead_lights_dimmer_front_office
+    - light.fan_front_office
+    - light.desk_light_front_office
+    # Living Room
+    - light.overhead_lights_dimmer_living_room
+    - light.fan_living_room
+    - light.floor_lamp_living_room
+    # Kitchen
+    - light.overhead_lights_dimmer_kitchen
+    - light.pendant_lights_kitchen
+    # Hallway
+    - light.overhead_lights_hallway
+    - light.overhead_lights_coat_closet_hallway
+    # Guest Bedroom
+    - light.fan_guest_bedroom
+    
+    # Guest Bathroom
 
-# All Devices
+    # Back Office
+    - light.overhead_lights_dimmer_back_office
+    - light.fan_back_office
+    - light.closet_light_back_office
+    # Powder Room
+    - light.vanity_light_powder_room
+    # Deck
+    - light.light_deck
+    # Master Bedroom
+    - light.overhead_lights_master_bedroom
+    - light.fan_master_bedroom
+    - light.bed_night_light_tammy_master_bedroom
+    - light.bed_night_light_jim_master_bedroom
+    - light.tammy_s_bed_lamp
+    - light.jim_s_bed_lamp
+    # Master Bathroom
+    - light.left_vanity_light_master_bathroom
+    - light.right_vanity_light_master_bathroom
+
 all_device_switch_entities:
   entities:
     

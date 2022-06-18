@@ -24,13 +24,10 @@
           cards:
             - image: /local/images/tammy_small.png
               elements:
-                icon: mdi:floor-lamp
-       #       !include ../elements/frontpage-photo-stephanie.yaml
-            - image: /local/images/jim_small.png
+                !include ../elements/frontpage-photo-tammy.yaml
+            - image: /local/images/jim_small.png  
               elements:
-                icon: mdi:floor-lamp
-         #   elements:
-         #     !include ../elements/frontpage-photo-jimmy.yaml 
+                !include ../elements/frontpage-photo-jim.yaml 
       thermostat:
       # Small Screens
       - title: Thermostats

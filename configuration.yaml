@@ -24,10 +24,16 @@ weather:
 hydrawise:
   access_token: !secret hydrawise_api_key
 
+ifttt:
+  key: !secret iftt_webhooks_api_key
+
+  
+
 automation: !include automations.yaml
 binary_sensor: !include binary_sensors.yaml
+cover: !include covers.yaml
 group: !include groups.yaml
-light: !include lights.yaml
+input_number: !include input_numbers.yaml
 sensor: !include sensors.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml

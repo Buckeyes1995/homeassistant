@@ -1,12 +1,307 @@
-# Lights (example)
-  lights:
-    title: Lights
-    show_in_favorites: true
-    show_in_menu: true
-    icon: mdi:lightbulb
-#    addons:
-#      button:
-#        - title: Living Room
-#          entities:
-#            - entity: light.ceiling
-#            - entity: light.table
+# Lights Ground Floor
+lights:
+  title: Lights
+  subtitle: "[[[ if (states['sensor.current_lights_on'].state == 0) return `All lights are turned off`; if (states['sensor.current_lights_on'].state == 1) return `1 light is turned on`; else return `${states['sensor.current_lights_on'].state} lights are turned on`; ]]]"
+  icon: mdi:floor-lamp
+  show_in_favorites: true
+  show_in_menu: false
+  button_badge: sensor.current_lights_on
+  button_label: "[[[ if (states['sensor.current_lights_on'].state == 0) return `Lights Off`; else return `${states['sensor.current_lights_on'].state} Lights On`; ]]]"
+  view_selector:
+    columns: 3
+    aspect_ratio: 3/1
+    size: 15%
+    elements:
+      - icon: mdi:home-floor-g
+        path: lights
+        this_view: true
+        name: Indoors
+      - icon: mdi:weather-night
+        path: lights_2
+        name: Outdoors
+  layout:
+    layout:
+      card_margin: 4px 8px 8px
+      margin: 0px 8px
+  addons:
+    button:
+      # Small Screens
+      - title: Living Room
+        entities:
+          - entity: light.overhead_lights_dimmer_living_room
+            type: color-temp
+          - entity: light.floor_lamp_living_room
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Front Office
+        entities:
+          - entity: light.overhead_lights_dimmer_front_office
+            type: color-temp
+          - entity: light.fan_front_office
+            type: color-temp
+          - entity: light.desk_light_front_office
+            type: rgb
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Kitchen
+        entities:
+          - entity: light.overhead_lights_dimmer_kitchen
+            type: color-temp
+          - entity: light.pendant_lights_kitchen
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      # - title: Side Entrance
+      #   entities:
+      #     - entity: light.keuken
+      #       type: color-temp
+      #   view_layout:
+      #     show:
+      #       mediaquery: "(max-width: 350px)"
+      #   columns: 3
+      - title: Guest Bedroom
+        entities:
+          - entity: light.fan_guest_bedroom
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Hallway
+        entities:
+          - light.overhead_lights_hallway
+          - light.overhead_lights_coat_closet_hallway
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Powder Room
+        entities:
+          - light.vanity_light_powder_room
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Back Office
+        entities:
+          - entity: light.fan_back_office
+            type: color-temp
+          - entity: light.closet_light_back_office
+            type: color-temp
+          - entity: light.overhead_lights_dimmer_back_office
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Master Bedroom
+        entities:
+          - entity: light.overhead_lights_master_bedroom
+            type: color-temp
+          - entity: light.jim_s_bed_lamp
+            type: color-temp 
+          - entity: light.tammy_s_bed_lamp
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Master Bathroom
+        entities:
+          - entity: switch.overhead_lights_master_bathroom
+            type: color-temp  
+          - entity: light.left_vanity_light_master_bathroom
+            type: color-temp
+          - entity: light.right_vanity_light_master_bathroom
+            type: color-temp
+
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+
+      # Larger Screens
+      - title: Living Room
+        entities:
+          - entity: light.overhead_lights_dimmer_living_room
+            type: color-temp
+          - entity: light.floor_lamp_living_room
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Front Office
+        entities:
+          - entity: light.overhead_lights_dimmer_front_office
+            type: color-temp
+          - entity: light.fan_front_office
+            type: color-temp
+          - entity: light.desk_light_front_office
+            type: rgb
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Kitchen
+        entities:
+          - entity: light.overhead_lights_dimmer_kitchen
+            type: color-temp
+          - entity: light.pendant_lights_kitchen
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      # - title: Side Entrance
+      #   entities:
+      #     - entity: light.keuken
+      #       type: color-temp
+      #     - entity: light.keuken_leds
+      #       type: rgb
+      #     - entity: light.keuken_leds_onder
+      #       type: rgb
+      #     - entity: light.keuken_led_lampen
+      #       type: rgb
+      #   view_layout:
+      #     show:
+      #       mediaquery: "(min-width: 350px)"
+      #   columns: 3
+      - title: Guest Bedroom
+        entities:
+          - entity: light.fan_guest_bedroom
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Hallway
+        entities:
+          - light.overhead_lights_hallway
+          - light.overhead_lights_coat_closet_hallway
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Powder Room
+        entities:
+          - light.vanity_light_powder_room
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Back Office
+        entities:
+          - entity: light.fan_back_office
+            type: color-temp
+          - entity: light.closet_light_back_office
+            type: color-temp
+          - entity: light.overhead_lights_dimmer_back_office
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Master Bedroom
+        entities:
+          - entity: light.overhead_lights_master_bedroom
+            type: color-temp
+          - entity: light.jim_s_bed_lamp
+            type: color-temp 
+          - entity: light.tammy_s_bed_lamp
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+      - title: Master Bathroom
+        entities:
+          - entity: switch.overhead_lights_master_bathroom
+            type: color-temp
+          - entity: light.left_vanity_light_master_bathroom
+            type: color-temp
+          - entity: light.right_vanity_light_master_bathroom
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+# # Adaptive Lighting
+# lights_2:
+#   title: Lights
+#   subtitle: "[[[ if (states['sensor.current_lights_on'].state == 0) return `All lights are turned off`; if (states['sensor.current_lights_on'].state == 1) return `1 light is turned on`; else return `${states['sensor.current_lights_on'].state} lights are turned on`; ]]]"
+#   icon: mdi:floor-lamp
+#   show_in_menu: false
+#   button_badge: sensor.current_lights_on
+#   button_label: "[[[ if (states['sensor.current_lights_on'].state == 0) return `Lights Off`; else return `${states['sensor.current_lights_on'].state} Lights On`; ]]]"
+#   view_selector:
+#     columns: 3
+#     aspect_ratio: 3/1
+#     size: 15%
+#     elements:
+#       - icon: mdi:home-floor-b
+#         path: lights_1
+#         name: Basement
+#       - icon: mdi:home-floor-g
+#         path: lights
+#         name: Ground Floor
+#       - icon: mdi:theme-light-dark
+#         path: lights_2
+#         name: Adaptive
+#         this_view: true
+#   layout:
+#     layout:
+#       card_margin: 4px 8px 8px
+#       margin: 0px 8px
+#   addons:
+#     button:
+#       - title: Woonkamer
+#         entities:
+#           - entity: switch.adaptive_lighting_livingroom_leds
+#             name: LEDs
+#           - entity: switch.adaptive_lighting_livingroom_lights
+#             name: Lampen
+#       - title: Kleine Kamer
+#         entities:
+#           - entity: switch.adaptive_lighting_office_leds
+#             name: LEDs
+#           - entity: switch.adaptive_lighting_office_lights
+#             name: Lampen
+#       - title: Slaapkamer
+#         entities:
+#           - entity: switch.adaptive_lighting_bedroom_leds
+#             name: LEDs
+#           - entity: switch.adaptive_lighting_bedroom_lights
+#             name: Lampen
+#       - title: Keuken
+#         entities:
+#           - entity: switch.adaptive_lighting_kitchen_leds
+#             name: LEDs
+#           - entity: switch.adaptive_lighting_kitchen_lights
+#             name: Lampen
+#           - entity: switch.adaptive_lighting_kitchen_workspace
+#             name: Aanrecht
+#       - title: Bijkeuken
+#         entities:
+#           - entity: switch.adaptive_lighting_laundry
+#             name: Lamp
+#       - title: Balkon
+#         entities:
+#           - entity: switch.adaptive_lighting_outside
+#             name: Lamp
+#       - title: Toilet
+#         entities:
+#           - entity: switch.adaptive_lighting_toilet
+#             name: Lamp
+#       - title: Berging
+#         entities:
+#           - entity: switch.adaptive_lighting_berging
+#             name: Lamp

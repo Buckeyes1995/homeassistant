@@ -1,0 +1,59 @@
+blind_script_front_office_front:
+  sequence:
+    - service_template: cover.{{mode}}_cover
+      data:
+        entity_id: cover.front_office_front
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.blind_position_front_office_front
+        value: "{{position}}"
+
+blind_script_front_office_side:
+  sequence:
+    - service_template: cover.{{mode}}_cover
+      data:
+        entity_id: cover.front_office_side
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.blind_position_front_office_side
+        value: "{{position}}"
+
+blind_script_living_room_side_left:
+  sequence:
+    - service_template: cover.{{mode}}_cover
+      data:
+        entity_id: cover.living_room_side_left
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.blind_position_living_room_side_left
+        value: "{{position}}"
+
+blind_script_living_room_side_center:
+  sequence:
+    - service_template: cover.{{mode}}_cover
+      data:
+        entity_id: cover.living_room_side_center
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.blind_position_living_room_side_center
+        value: "{{position}}"
+
+blind_script_living_room_side_right:
+  sequence:
+    - service_template: cover.{{mode}}_cover
+      data:
+        entity_id: cover.living_room_side_right
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.blind_position_living_room_side_right
+        value: "{{position}}"
+
+blind_script_living_room_front:
+  sequence:
+    - service_template: cover.{{mode}}_cover
+      data:
+        entity_id: cover.living_room_front
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.living_room_cover_front
+        value: "{{position}}"
