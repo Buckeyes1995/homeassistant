@@ -235,3 +235,12 @@ master_bedroom_bed_lamp_group:
 #    - light.light_switch_2
 #    - light.light_switch_3
 #    - light.light_switch_4
+
+#########################################################################
+###                                PRESENCE GROUPS                    ###   
+#########################################################################
+home_presence:
+  name: Home Presence
+  entities: 
+    - person.jim
+    - person.tammy

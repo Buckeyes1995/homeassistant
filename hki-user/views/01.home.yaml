@@ -28,6 +28,31 @@
             - image: /local/images/jim_small.png  
               elements:
                 !include ../elements/frontpage-photo-jim.yaml 
+      custom_1:
+        - title: hide
+          view_layout:
+            show:
+              mediaquery: "(min-width: 650px)"
+          cards:
+            - type: custom:atomic-calendar-revive
+              card_mod:
+                class: hki
+              showProgressBar: true
+              maxDaysToShow: 7
+              maxEventCount: 6
+              europeanDate: false
+              showNoEventsForToday: true
+              showMonth: true
+              showWeekDay: true
+              hideFinishedEvents: true
+              entities:
+                - calendar.jim
+                - calendar.tammy
+        - title: hide
+          view_layout:
+            show:
+              mediaquery: "(min-width: 650px)"
+
       thermostat:
       # Small Screens
       - title: Thermostats

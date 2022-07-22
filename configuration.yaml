@@ -10,12 +10,12 @@ default_config:
 tts:
   - platform: google_translate
 
-media_player:
-  - platform: androidtv
-    host: 10.0.0.63
-    name: "Living Room Super Shield"
-    adb_server_ip: 10.0.0.150
-    adb_server_port: 5037
+# media_player:
+#   - platform: androidtv
+#     host: 10.0.0.63
+#     name: "Living Room Super Shield"
+#     adb_server_ip: 10.0.0.150
+#     adb_server_port: 5037
 
 weather:
   - platform: pirateweather
@@ -27,14 +27,44 @@ hydrawise:
 ifttt:
   key: !secret iftt_webhooks_api_key
 
-  
+# template:
+#   - sensor:
+#       - name: "Jag Distance to Service"
+#         icon: "mdi:wrench"
+#         state: "{{ state_attr('sensor.jag_all_info', 'core status').extKilometersToService | int}}"
+#         unit_of_measurement: km
+#         state_class: measurement
+#         availability: "{{ state_attr('sensor.jag_all_info', 'core status').extKilometersToService | int('unavailable') is number}}"
+
+
+
+
+
+# switch:
+#   - platform: template
+#     switches:
+#       skylight:
+#         value_template: "{{ is_state('lock.jag_doors', 'unlocked') }}"
+#           turn_on:
+#             service: jlrincontrol.lock_vehicle
+#             target:
+#               entity_id: sensor.jag_info
+#             data:
+#               pin: !secret jag_pin
+#           turn_off:
+#             service: jlrincontrol.unlock_vehicle
+#             target:
+#               entity_id: sensor.jag_info
+
 
 automation: !include automations.yaml
 binary_sensor: !include binary_sensors.yaml
 cover: !include covers.yaml
 group: !include groups.yaml
 input_number: !include input_numbers.yaml
+lock: !include locks.yaml
 sensor: !include sensors.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 switch: !include switches.yaml
+template: !include templates.yaml

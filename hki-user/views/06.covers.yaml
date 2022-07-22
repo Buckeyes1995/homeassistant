@@ -1,0 +1,449 @@
+# Covers
+covers:
+  title: Covers
+  icon: mdi:roller-shade
+  show_in_favorites: true
+  show_in_menu: false
+  #button_badge: sensor.average_house_temperature
+  #button_label: >
+  #  [[[ 
+  #    if (states['sensor.current_climate_entities_on'].state == 0) return `Thermostats Off`;
+  #    else return `${states['sensor.current_climate_entities_on'].state} Thermostats On`;
+  #  ]]]
+  layout:
+    layout:
+      card_margin: 4px 8px 8px
+      margin: 0px 8px  
+      width: 100
+  addons:
+    custom:
+      # Small Screens
+
+      ###########################################################################################
+      #### FRONT OFFICE                                                                      ####
+      ###########################################################################################
+      - title: Front Office
+        box_shadow: none
+        cards:
+          - type: custom:slider-button-card
+            entity: input_number.front_office_cover_front
+            name: Front
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.front_office_cover_side
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+
+      ###########################################################################################
+      #### LIVING ROOM                                                                       ####
+      ###########################################################################################
+      - title: Living Room
+        box_shadow: none
+        cards:
+          - type: custom:slider-button-card
+            entity: input_number.living_room_cover_front
+            name: Front
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.living_room_cover_side_left
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.living_room_cover_side_center
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.living_room_cover_side_right
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+
+      # Larger Screens
+
+      ###########################################################################################
+      #### FRONT OFFICE                                                                      ####
+      ###########################################################################################
+      - title: Front Office
+        box_shadow: none
+        cards:
+          - type: custom:slider-button-card
+            card_mod:
+              class: hki
+              style: |
+                ha-card {
+                  --ha-card-background: blue;
+                  color: var(--primary-color);
+                }
+            entity: input_number.front_office_cover_front
+            name: Front
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle  
+          - type: custom:slider-button-card
+            view_layout:
+              column: 2
+            entity: input_number.front_office_cover_side
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle    
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 4
+
+      ###########################################################################################
+      #### lIVING ROOM                                                                       ####
+      ###########################################################################################
+      - title: Living Room
+        box_shadow: none
+        cards:
+          - type: custom:slider-button-card
+            entity: input_number.living_room_cover_front
+            name: Front
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.living_room_cover_side_left
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.living_room_cover_side_center
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+          - type: custom:slider-button-card
+            view_layout:
+              column: 1
+            entity: input_number.living_room_cover_side_right
+            name: Side
+            slider:
+              direction: top-bottom
+              background: gradient
+              use_state_color: true
+              use_percentage_bg_opacity: false
+              show_track: false
+              disable_sliding: false
+              force_square: false
+              show_attribute: false
+              tap_action:
+                action: toggle
+            show_name: true
+            show_state: false
+            compact: false
+            icon:
+              icon: mdi:roller-shade
+              show: true
+              use_state_color: true
+              tap_action:
+                action: more-info
+            action_button:
+              mode: toggle
+              icon: mdi:power
+              show: false
+              show_spinner: true
+              tap_action:
+                action: toggle
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3

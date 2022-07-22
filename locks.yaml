@@ -1,0 +1,13 @@
+- platform: template
+  name: Jag Door Lock
+  value_template: "{{ is_state('lock.jag_doors', 'locked') }}"
+  lock:
+    service: jlrincontrol.lock_vehicle
+    data:
+      entity_id: lock.jag_doors
+      pin: !secret jag_pin
+  unlock:
+    service: jlrincontrol.unlock_vehicle
+    data:
+      entity_id: lock.jag_doors
+      pin: !secret jag_pin

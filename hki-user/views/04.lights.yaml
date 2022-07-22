@@ -7,18 +7,6 @@ lights:
   show_in_menu: false
   button_badge: sensor.current_lights_on
   button_label: "[[[ if (states['sensor.current_lights_on'].state == 0) return `Lights Off`; else return `${states['sensor.current_lights_on'].state} Lights On`; ]]]"
-  view_selector:
-    columns: 3
-    aspect_ratio: 3/1
-    size: 15%
-    elements:
-      - icon: mdi:home-floor-g
-        path: lights
-        this_view: true
-        name: Indoors
-      - icon: mdi:weather-night
-        path: lights_2
-        name: Outdoors
   layout:
     layout:
       card_margin: 4px 8px 8px

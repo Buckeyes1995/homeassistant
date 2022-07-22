@@ -1,0 +1,41 @@
+    front_office_cover_front:
+      name: Front Office Cover - Front
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
+    front_office_cover_side:
+      name: Front Office Cover - Side
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
+    living_room_cover_side_left:
+      name: Living Room Cover - Side Left
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
+    living_room_cover_side_center:
+      name: Living Room Cover - Side Center
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
+    living_room_cover_side_right:
+      name: Living Room Cover - Side Right
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
+    living_room_cover_front:
+      name: Living Room Cover - Front
+      initial: 0
+      min: 0
+      max: 100
+      step: 1

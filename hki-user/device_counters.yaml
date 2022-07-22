@@ -91,7 +91,13 @@ all_device_switch_entities:
 # All Covers
 all_cover_entities:
   entities:
-
+    - cover.front_office_front
+    - cover.front_office_side
+    - cover.living_room_front
+    - cover.living_room_side_center
+    - cover.living_room_side_left
+    - cover.living_room_side_right
+    
 # All Garage Doors
 all_garage_door_entities:
   entities:

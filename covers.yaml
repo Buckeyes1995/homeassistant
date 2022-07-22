@@ -1,0 +1,95 @@
+  - platform: template
+    covers:
+      front_office_front:
+        friendly_name: Front Office - Front
+        value_template: "{{is_state('sensor.blind_state_sensor_front_officed_front', 'Open')}}"
+        open_cover: 
+          service: script.blind_script_front_office_front
+          data:
+            mode: 'open'
+            position: '0'
+        close_cover:  
+          service: script.blind_script_front_office_front
+          data:
+            mode: 'close'
+            position: '100'
+
+  - platform: template
+    covers:
+      front_office_side:
+        friendly_name: Front Office - Side
+        value_template: "{{is_state('sensor.blind_state_sensor_front_office_side', 'Open')}}"
+        open_cover: 
+          service: script.blind_script_front_office_side
+          data:
+            mode: 'open'
+            position: '0'
+        close_cover:  
+          service: script.blind_script_front_office_side
+          data:
+            mode: 'close'
+            position: '100'         
+
+  - platform: template
+    covers:
+      living_room_side_left:
+        friendly_name: Living Room - Side Left
+        value_template: "{{is_state('sensor.blind_state_sensor_living_room_side_left', 'Open')}}"
+        open_cover: 
+          service: script.blind_script_living_room_side_left
+          data:
+            mode: 'open'
+            position: '0'
+        close_cover:  
+          service: script.blind_script_living_room_side_left
+          data:
+            mode: 'close'
+            position: '100'     
+
+  - platform: template
+    covers:
+      living_room_side_center:
+        friendly_name: Living Room - Side Center
+        value_template: "{{is_state('sensor.blind_state_sensor_living_room_side_center', 'Open')}}"
+        open_cover: 
+          service: script.blind_script_living_room_side_center
+          data:
+            mode: 'open'
+            position: '0'
+        close_cover:  
+          service: script.blind_script_living_room_side_center
+          data:
+            mode: 'close'
+            position: '100' 
+
+  - platform: template
+    covers:
+      living_room_side_right:
+        friendly_name: Living Room - Side Right
+        value_template: "{{is_state('sensor.blind_state_sensor_living_room_side_right', 'Open')}}"
+        open_cover: 
+          service: script.blind_script_living_room_side_right
+          data:
+            mode: 'open'
+            position: '0'
+        close_cover:  
+          service: script.blind_script_living_room_side_right
+          data:
+            mode: 'close'
+            position: '100' 
+
+  - platform: template
+    covers:
+      living_room_front:
+        friendly_name: Living Room - Front
+        value_template: "{{is_state('sensor.blind_state_sensor_living_room_front', 'Open')}}"
+        open_cover: 
+          service: script.blind_script_living_room_front
+          data:
+            mode: 'open'
+            position: '0'
+        close_cover:  
+          service: script.blind_script_living_room_front
+          data:
+            mode: 'close'
+            position: '100' 

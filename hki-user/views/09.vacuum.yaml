@@ -1,0 +1,56 @@
+# Vacuum
+vacuum:
+  subtitle: "[[[ return `The current status of Shirely is ${states['vacuum.shirley'].state}'  'The current status of Laverene is ${states['vacuum.shirley'].state}' ; ]]]"
+  icon: mdi:robot-vacuum
+  show_in_favorites: true
+  show_in_menu: false
+  button_badge: vacuum.shirley
+  layout:
+    layout_type: custom:grid-layout
+    layout:
+      grid-template-columns: 100%
+      mediaquery:
+        "(min-width: 650px)":
+          grid-template-columns: 60% 40%
+  addons:
+    custom:
+      - title: hide
+        cards:
+          - type: custom:vacuum-card
+            card_mod:
+              class: hki
+            entity: vacuum.shirley
+            stats:
+              default:
+                - attribute: fan_speed
+                  subtitle: Speed
+                - attribute: last_error_message
+                  subtitle: Last Error Message
+          - type: custom:vacuum-card
+            card_mod:
+              class: hki
+            entity: vacuum.laverne
+            stats:
+              default:
+                - attribute: fan_speed
+                  subtitle: Speed
+                - attribute: last_error_message
+                  subtitle: Last Error Message
+      # - title: hide
+      #   cards:
+      #     - type: vertical-stack
+      #       cards:
+      #         - type: history-graph
+      #           card_mod:
+      #             class: hki
+      #           hours_to_show: 24
+      #           entities:
+      #             - vacuum.shirley
+      #     - type: vertical-stack
+      #       cards:
+      #         - type: history-graph
+      #           card_mod:
+      #             class: hki
+      #           hours_to_show: 24
+      #           entities:
+      #             - vacuum.laverne

@@ -3,7 +3,7 @@ climate:
   subtitle: "[[[ return `The current average temperature is ${states['sensor.average_house_temperature'].state}` ]]]"
   icon: mdi:thermometer
   show_in_favorites: true
-  show_in_menu: false
+  show_in_menu: true
   button_badge: sensor.average_house_temperature
   button_label: >
     [[[ 
