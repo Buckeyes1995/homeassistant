@@ -5,3 +5,15 @@ sensor:
     unit_of_measurement: km
     state_class: measurement
     availability: "{{ state_attr('sensor.jag_all_info', 'core status').extKilometersToService | int('unavailable') is number}}"
+
+  - name: "Left Front Yard Next Watering"
+    icon: "mdi:water-outline"  
+    state: "{{ as_timestamp(states('sensor.left_front_yard_next_cycle')) | timestamp_custom('%m/%d/%Y %H:%M%p' ) }}"
+    
+  - name: "Right Front Yard Next Watering"
+    icon: "mdi:water-outline"  
+    state: "{{ as_timestamp(states('sensor.right_front_yar_next_cycle')) | timestamp_custom('%m/%d/%Y %H:%M%p' ) }}"
+    
+  - name: "Flower Beds Next Watering"
+    icon: "mdi:water-outline"  
+    state: "{{ as_timestamp(states('sensor.flower_beds_next_cycle')) | timestamp_custom('%m/%d/%Y %H:%M%p' ) }}"

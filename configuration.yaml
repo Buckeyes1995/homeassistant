@@ -27,36 +27,6 @@ hydrawise:
 ifttt:
   key: !secret iftt_webhooks_api_key
 
-# template:
-#   - sensor:
-#       - name: "Jag Distance to Service"
-#         icon: "mdi:wrench"
-#         state: "{{ state_attr('sensor.jag_all_info', 'core status').extKilometersToService | int}}"
-#         unit_of_measurement: km
-#         state_class: measurement
-#         availability: "{{ state_attr('sensor.jag_all_info', 'core status').extKilometersToService | int('unavailable') is number}}"
-
-
-
-
-
-# switch:
-#   - platform: template
-#     switches:
-#       skylight:
-#         value_template: "{{ is_state('lock.jag_doors', 'unlocked') }}"
-#           turn_on:
-#             service: jlrincontrol.lock_vehicle
-#             target:
-#               entity_id: sensor.jag_info
-#             data:
-#               pin: !secret jag_pin
-#           turn_off:
-#             service: jlrincontrol.unlock_vehicle
-#             target:
-#               entity_id: sensor.jag_info
-
-
 automation: !include automations.yaml
 binary_sensor: !include binary_sensors.yaml
 cover: !include covers.yaml

@@ -244,3 +244,20 @@ home_presence:
   entities: 
     - person.jim
     - person.tammy
+
+#########################################################################
+###                                COVER GROUPS                       ###   
+#########################################################################
+front_office_shades:
+  name: Front Office Shades
+  entities:
+    - cover.front_office_front
+    - cover.front_office_side
+
+living_room_shades:
+  name: Living Room Shades
+  entities:
+    - cover.living_room_front
+    - cover.living_room_side_center
+    - cover.living_room_side_left
+    - cover.living_room_side_right

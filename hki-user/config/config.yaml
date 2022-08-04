@@ -64,40 +64,26 @@ config:
         hex_color: '#0300ff'
 
 # FIND MY *Please read the documentation before editing! https://github.com/jimz011/homekit-infused/docs/addons/find-my.md
-#  find_my:
-#    persons:
-#      - name: Jimmy
-#        entity: person.jimmy
-#        battery_entity: sensor.z_fold_3_jimmy_battery_level
-#        geocoded_location_entity: sensor.z_fold_3_jimmy_geocoded_location
-#      - name: Stephanie
-#        entity: person.stephanie
-#        battery_entity: sensor.sm_n986b_battery_level
-#        geocoded_location_entity: sensor.sm_n986b_geocoded_location
-#      - name: Tala
-#        entity: person.tala
-#    devices:
-#      - name: Riem Tala
-#        entity: person.tala
-#        entity_picture: /local/images/tile-black.jpg
-#      - name: Keys Jimmy
-#        entity: device_tracker.keys
-#      - name: Keys Stephanie
-#        entity: device_tracker.keys_stephanie
-#      - name: Z Fold 3
-#        entity: device_tracker.z_fold_3_jimmy
-#        geocoded_location_entity: sensor.z_fold_3_jimmy_geocoded_location
-#        battery_entity: sensor.z_fold_3_jimmy_battery_level
-#      - name: Note 20 Ultra
-#        entity: device_tracker.sm_n986b
-#        battery_entity: sensor.sm_n986b_battery_level
-#        geocoded_location_entity: sensor.sm_n986b_geocoded_location
-#      - name: Watch4 Jimmy
-#        entity: device_tracker.unifi_fe_a7_45_e9_01_53_default
-#        battery_entity: sensor.galaxy_watch4_classic_ecsm_battery_level
-#      - name: Watch4 Stephanie
-#        entity: device_tracker.sm_r880
-#        battery_entity: sensor.galaxy_watch4_classic_w4wd_battery_level
+  find_my:
+    persons:
+      - name: Jim
+        entity: person.jim
+        battery_entity: sensor.jims_iphone_battery_level
+        geocoded_location_entity: sensor.jims_iphone_geocoded_location
+      - name: Tammy
+        entity: person.tammy
+        battery_entity: sensor.tammy_s_phone_battery_level
+        geocoded_location_entity: sensor.tammy_s_phone_geocoded_location
+    devices:
+      - name: Jim's Ipad
+        entity: device_tracker.jamess_ipad_2
+        battery_entity: sensor.jamess_ipad_2_battery_level
+        entity_picture: /local/images/ipadair_small.png
+        geocoded_location_entity: sensor.jamess_ipad_2_geocoded_location
+    vehicles:
+      - name: Jaguar
+        entity: sensor.epace
+        entity_picture: /local/images/epace_small.png
 
 # PROFILE MENU *Please read the documentation before editing! https://github.com/jimz011/homekit-infused/docs/addons/profile.md
   profile:

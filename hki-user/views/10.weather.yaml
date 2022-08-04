@@ -1,0 +1,35 @@
+# Weather
+weather:
+  subtitle: "[[[ return `${states['weather.pirateweather'].state}`; ]]]"
+  #button_badge: sensor.buiten_temperatuur
+  icon: mdi:weather-partly-cloudy
+  layout:
+    layout_type: custom:vertical-layout
+    layout:
+      layout:
+        card_margin: 4px 8px 8px
+        margin: 0px 8px
+        max_cols: 1
+  addons:
+    weather:
+      - title: hide
+        type: core
+        entity: weather.pirateweather
+        city_name: Fort Worth
+    air_visual:
+      - title: hide
+        air_pollution_level: sensor.u_s_air_pollution_level
+        air_quality_index: sensor.u_s_air_quality_index
+        main_pollutant: sensor.u_s_main_pollutant
+        weather: weather.pirateweather
+        city_name: Fort Worth
+    sun_card:
+      - title: hide
+        show_elevation: true 
+    # meteoalarm:
+    #   - title: hide
+    #     entity: binary_sensor.meteoalarm
+    iframe:
+      - title: hide
+        url:  https://embed.windy.com/embed2.html?lat=-32.702&lon=-97.383
+    

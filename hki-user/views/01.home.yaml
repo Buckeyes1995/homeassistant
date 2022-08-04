@@ -28,6 +28,24 @@
             - image: /local/images/jim_small.png  
               elements:
                 !include ../elements/frontpage-photo-jim.yaml 
+      
+      favorites:
+        # Small Screens
+        - title: hide
+          view_layout:
+            show:
+              column: 1
+              mediaquery: "(max-width: 350px)"
+          columns: 3
+        # Larger Screens
+        - title: hide
+          view_layout:
+            show:
+              column: 1
+              mediaquery: "(min-width: 350px)"
+          columns: 4
+
+
       custom_1:
         - title: hide
           view_layout:

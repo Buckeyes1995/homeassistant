@@ -21,7 +21,7 @@ cars:
           - type: picture-elements
             card_mod:
               class: hki
-            image: /local/images/epace1.png
+            image: /local/images/epace.png
             elements:
               - type: state-icon
                 icon: mdi:car-key

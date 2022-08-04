@@ -66,3 +66,35 @@
           Closed
         {% endif %}
 
+- platform: google_geocode
+  name: Jim's Ipad
+  origin: device_tracker.jamess_ipad_2
+  options: 'street_number, street, city, state'
+  api_key: !secret google_maps_api_key
+
+- platform: google_geocode
+  name: EPace
+  origin: device_tracker.jaguar_device_tracker
+  options: 'street_number, street, city, state'
+  api_key: !secret google_maps_api_key
+
+- platform: mqtt_room
+  device_id: "apple:1007:11-7"
+  name: 'Beacon - Jims Iphone'
+  state_topic: 'espresense/rooms'
+  timeout: 5
+  away_timeout: 120
+
+- platform: mqtt_room
+  device_id: "apple:1005:9-24"
+  name: 'Beacon - Jims Apple Watch'
+  state_topic: 'espresense/rooms'
+  timeout: 5
+  away_timeout: 120
+
+- platform: mqtt_room
+  device_id: "apple:1005:9-8"
+  name: 'Beacon - Jims Work Iphone'
+  state_topic: 'espresense/rooms'
+  timeout: 5
+  away_timeout: 120

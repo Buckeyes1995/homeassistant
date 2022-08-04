@@ -3,7 +3,7 @@
     image: /local/images/jim_small.png
     tap_action:
       action: navigate
-      navigation_path: jim
+      navigation_path: find_my
     hold_action:
       action: none
     style:

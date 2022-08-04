@@ -1,0 +1,57 @@
+# Cars
+irrigation:
+  icon: mdi:sprinkler-variant
+  show_in_favorites: true
+  show_in_menu: true
+  #button_badge: sensor.average_house_temperature
+  #button_label: >
+  #  [[[ 
+  #    if (states['sensor.current_climate_entities_on'].state == 0) return `Thermostats Off`;
+  #    else return `${states['sensor.current_climate_entities_on'].state} Thermostats On`;
+  #  ]]]
+  addons:
+    custom:
+      - title: hide
+        cards:
+          - type: custom:timer-bar-card
+            name: Flower Bed
+            icon: mdi:sprinkler-variant
+            invert: false
+            state_color: true
+            bar_width: 35%
+            bar_foreground: blue
+            entities:
+              - binary_sensor.flower_beds_watering
+              - sensor.flower_beds_next_watering
+            duration:
+              entity: sensor.flower_beds_watering_time
+              units: minutes
+        
+          - type: custom:timer-bar-card
+            name: Left Front Yard 
+            icon: mdi:sprinkler-variant
+            invert: false
+            state_color: true
+            bar_width: 35%
+            bar_foreground: blue
+            entities:
+              - binary_sensor.left_front_yard_watering
+              - sensor.left_front_yard_next_watering
+            duration:
+              entity: sensor.left_front_yard_watering_time
+              units: minutes
+       
+          - type: custom:timer-bar-card
+            name: Right Front Yard 
+            icon: mdi:sprinkler-variant
+            invert: false
+            state_color: true
+            bar_width: 35%
+            bar_foreground: blue
+            entities:
+              - binary_sensor.right_front_yar_watering
+              - sensor.right_front_yard_next_watering
+            duration:
+              entity: sensor.right_front_yar_watering_time
+              units: minutes
+
