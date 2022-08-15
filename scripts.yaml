@@ -52,14 +52,3 @@ blind_script_living_room_front:
     data_template:
       entity_id: input_number.living_room_cover_front
       value: '{{position}}'
-'1659203652366':
-  alias: Text-to-Speech on Sonos
-  use_blueprint:
-    path: Talvish/sonos_say.yaml
-  mode: single
-'1659287124508':
-  alias: Text-to-Speech on Sonos
-  use_blueprint:
-    path: Talvish/sonos_say.yaml
-  mode: single
-  icon: mdi:music

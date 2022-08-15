@@ -13,70 +13,208 @@ lights:
       margin: 0px 8px
   addons:
     button:
-      # Small Screens
+       ##########################################################################
+      ### Note: Both small screens (phones) and large screens (PC, Tablets)  ###
+      ###       customized using the 'mediaquery' attribute; small <= 350px. ###
+      ###                                                    large >= 350px. ###
+      ##########################################################################
+
+      ##########################################################################
+      ###                                FRONT PORCH                         ###
+      ##########################################################################
+      - title: Front Porch
+        entities:
+          - entity: fan.front_porch_fan
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+
+      - title: Front Porch
+        entities:
+          - entity: fan.front_porch_fan
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+      ##########################################################################
+      ###                              lIVING ROOM                           ###
+      ##########################################################################
       - title: Living Room
         entities:
-          - entity: light.overhead_lights_dimmer_living_room
+          - entity: light.living_room_lights
             type: color-temp
-          - entity: light.floor_lamp_living_room
+          - entity: light.living_room_fan_light
             type: color-temp
+          - entity: light.living_room_floor_lamp
+            type: rgb
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Living Room
+        entities:
+          - entity: light.living_room_lights
+            type: color-temp
+          - entity: light.living_room_fan_light
+            type: color-temp
+          - entity: light.living_room_floor_lamp
+            type: rgb
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+      ##########################################################################
+      ###                              FRONT OFFICE                          ###
+      ##########################################################################
+      - title: Front Office
+        entities:
+          - entity: light.front_office_lights
+            type: color-temp
+          - entity: light.front_office_fan_light
+            type: color-temp
+          - entity: light.front_office_desk_lamp
+            type: rgb
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
       - title: Front Office
         entities:
-          - entity: light.overhead_lights_dimmer_front_office
+          - entity: light.front_office_lights
             type: color-temp
-          - entity: light.fan_front_office
+          - entity: light.front_office_fan_light
             type: color-temp
-          - entity: light.desk_light_front_office
+          - entity: light.front_office_desk_lamp
             type: rgb
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+      ##########################################################################
+      ###                              DINING ROOM                           ###
+      ##########################################################################
+
+      ##########################################################################
+      ###                                KITCHEN                             ###
+      ##########################################################################
+      - title: Kitchen
+        entities:
+          - entity: light.kitchen_lights
+            type: color-temp
+          - entity: light.kitchen_pendant_lights
+            type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
       - title: Kitchen
         entities:
-          - entity: light.overhead_lights_dimmer_kitchen
+          - entity: light.kitchen_lights
             type: color-temp
-          - entity: light.pendant_lights_kitchen
+          - entity: light.kitchen_pendant_lights
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+      ##########################################################################
+      ###                             lAUNDRY ROOM                           ###
+      ##########################################################################
+
+      ##########################################################################
+      ###                              SIDE PORCH                            ###
+      ##########################################################################   
+      - title: Side Porch
+        entities:
+          - entity: light.side_porch_light
             type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-      # - title: Side Entrance
-      #   entities:
-      #     - entity: light.keuken
-      #       type: color-temp
-      #   view_layout:
-      #     show:
-      #       mediaquery: "(max-width: 350px)"
-      #   columns: 3
+      - title: Side Porch
+        entities:
+          - entity: light.side_porch_light
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+      ##########################################################################
+      ###                              GUEST BEDROOM                         ###
+      ##########################################################################  
       - title: Guest Bedroom
         entities:
-          - entity: light.fan_guest_bedroom
+          - entity: light.guest_bedroom_fan_light
             type: color-temp
+          - entity: light.guest_bedroom_closet_light
+            type: color-temp          
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Guest Bedroom
+        entities:
+          - entity: light.guest_bedroom_fan_light
+            type: color-temp
+          - entity: light.guest_bedroom_closet_light
+            type: color-temp          
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+
+      ##########################################################################
+      ###                               HALLWAY                              ###
+      ##########################################################################  
+      - title: Hallway
+        entities:
+          - light.hallway_lights
+          - light.hallway_coat_closet_light
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
       - title: Hallway
         entities:
-          - light.overhead_lights_hallway
-          - light.overhead_lights_coat_closet_hallway
+          - light.hallway_lights
+          - light.hallway_coat_closet_light
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+        
+      ##########################################################################
+      ###                             POWDER ROOM                            ###
+      #########################################################################s#  
+      - title: Powder Room
+        entities:
+          - light.powder_room_vanity_light
+          - light.powder_room_fan_and_light
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
       - title: Powder Room
         entities:
-          - light.vanity_light_powder_room
+          - light.powder_room_vanity_light
+          - light.powder_room_fan_and_light
         view_layout:
           show:
-            mediaquery: "(max-width: 350px)"
+            mediaquery: "(min-width: 350px)"
         columns: 3
+
+      ##########################################################################
+      ###                             BACK OFFICE                            ###
+      ##########################################################################  
       - title: Back Office
         entities:
           - entity: light.fan_back_office
@@ -89,207 +227,83 @@ lights:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
+
+      ##########################################################################
+      ###                                DECK                                ###
+      ##########################################################################  
+      - title: Deck
+        entities:
+          - entity: light.deck_light
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Deck
+        entities:
+          - entity: light.deck_light
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
+        
+      ##########################################################################
+      ###                           MASTER BEDROOM                           ###
+      ##########################################################################  
       - title: Master Bedroom
         entities:
           - entity: light.overhead_lights_master_bedroom
             type: color-temp
           - entity: light.jim_s_bed_lamp
-            type: color-temp 
+            type: color-temp
           - entity: light.tammy_s_bed_lamp
             type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-      - title: Master Bathroom
-        entities:
-          - entity: switch.overhead_lights_master_bathroom
-            type: color-temp  
-          - entity: light.left_vanity_light_master_bathroom
-            type: color-temp
-          - entity: light.right_vanity_light_master_bathroom
-            type: color-temp
 
+      ##########################################################################
+      ###                           MASTER BATHROOM                          ###
+      ##########################################################################  
+      - title: Master Bedroom
+        entities:
+          - entity: light.master_bedroom_lights
+            type: color-temp
+          - entity: light.master_bedroom_bed_lamp_left
+            type: color-temp
+          - entity: light.master_bedroom_bed_lamp_right
+            type: color-temp
+          - entity: light.master_bedroom_bed_nightlight_left
+            type: color-temp
+          - entity: light.master_bedroom_bed_nightlight_right
+            type: color-temp
+          - entity: light.master_bedroom_closet_light
+            type: color-temp
+          - entity: light.master_bedroom_fan_light
+            type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-
-      # Larger Screens
-      - title: Living Room
-        entities:
-          - entity: light.overhead_lights_dimmer_living_room
-            type: color-temp
-          - entity: light.floor_lamp_living_room
-            type: color-temp
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      - title: Front Office
-        entities:
-          - entity: light.overhead_lights_dimmer_front_office
-            type: color-temp
-          - entity: light.fan_front_office
-            type: color-temp
-          - entity: light.desk_light_front_office
-            type: rgb
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      - title: Kitchen
-        entities:
-          - entity: light.overhead_lights_dimmer_kitchen
-            type: color-temp
-          - entity: light.pendant_lights_kitchen
-            type: color-temp
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      # - title: Side Entrance
-      #   entities:
-      #     - entity: light.keuken
-      #       type: color-temp
-      #     - entity: light.keuken_leds
-      #       type: rgb
-      #     - entity: light.keuken_leds_onder
-      #       type: rgb
-      #     - entity: light.keuken_led_lampen
-      #       type: rgb
-      #   view_layout:
-      #     show:
-      #       mediaquery: "(min-width: 350px)"
-      #   columns: 3
-      - title: Guest Bedroom
-        entities:
-          - entity: light.fan_guest_bedroom
-            type: color-temp
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      - title: Hallway
-        entities:
-          - light.overhead_lights_hallway
-          - light.overhead_lights_coat_closet_hallway
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      - title: Powder Room
-        entities:
-          - light.vanity_light_powder_room
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      - title: Back Office
-        entities:
-          - entity: light.fan_back_office
-            type: color-temp
-          - entity: light.closet_light_back_office
-            type: color-temp
-          - entity: light.overhead_lights_dimmer_back_office
-            type: color-temp
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
       - title: Master Bedroom
         entities:
-          - entity: light.overhead_lights_master_bedroom
+          - entity: light.master_bedroom_lights
             type: color-temp
-          - entity: light.jim_s_bed_lamp
-            type: color-temp 
-          - entity: light.tammy_s_bed_lamp
+          - entity: light.master_bedroom_bed_lamp_left
             type: color-temp
-        view_layout:
-          show:
-            mediaquery: "(min-width: 350px)"
-        columns: 3
-      - title: Master Bathroom
-        entities:
-          - entity: switch.overhead_lights_master_bathroom
+          - entity: light.master_bedroom_bed_lamp_right
             type: color-temp
-          - entity: light.left_vanity_light_master_bathroom
+          - entity: light.master_bedroom_bed_nightlight_left
             type: color-temp
-          - entity: light.right_vanity_light_master_bathroom
+          - entity: light.master_bedroom_bed_nightlight_right
+            type: color-temp
+          - entity: light.master_bedroom_closet_light
+            type: color-temp
+          - entity: light.master_bedroom_fan_light
             type: color-temp
         view_layout:
           show:
             mediaquery: "(min-width: 350px)"
         columns: 3
-
-# # Adaptive Lighting
-# lights_2:
-#   title: Lights
-#   subtitle: "[[[ if (states['sensor.current_lights_on'].state == 0) return `All lights are turned off`; if (states['sensor.current_lights_on'].state == 1) return `1 light is turned on`; else return `${states['sensor.current_lights_on'].state} lights are turned on`; ]]]"
-#   icon: mdi:floor-lamp
-#   show_in_menu: false
-#   button_badge: sensor.current_lights_on
-#   button_label: "[[[ if (states['sensor.current_lights_on'].state == 0) return `Lights Off`; else return `${states['sensor.current_lights_on'].state} Lights On`; ]]]"
-#   view_selector:
-#     columns: 3
-#     aspect_ratio: 3/1
-#     size: 15%
-#     elements:
-#       - icon: mdi:home-floor-b
-#         path: lights_1
-#         name: Basement
-#       - icon: mdi:home-floor-g
-#         path: lights
-#         name: Ground Floor
-#       - icon: mdi:theme-light-dark
-#         path: lights_2
-#         name: Adaptive
-#         this_view: true
-#   layout:
-#     layout:
-#       card_margin: 4px 8px 8px
-#       margin: 0px 8px
-#   addons:
-#     button:
-#       - title: Woonkamer
-#         entities:
-#           - entity: switch.adaptive_lighting_livingroom_leds
-#             name: LEDs
-#           - entity: switch.adaptive_lighting_livingroom_lights
-#             name: Lampen
-#       - title: Kleine Kamer
-#         entities:
-#           - entity: switch.adaptive_lighting_office_leds
-#             name: LEDs
-#           - entity: switch.adaptive_lighting_office_lights
-#             name: Lampen
-#       - title: Slaapkamer
-#         entities:
-#           - entity: switch.adaptive_lighting_bedroom_leds
-#             name: LEDs
-#           - entity: switch.adaptive_lighting_bedroom_lights
-#             name: Lampen
-#       - title: Keuken
-#         entities:
-#           - entity: switch.adaptive_lighting_kitchen_leds
-#             name: LEDs
-#           - entity: switch.adaptive_lighting_kitchen_lights
-#             name: Lampen
-#           - entity: switch.adaptive_lighting_kitchen_workspace
-#             name: Aanrecht
-#       - title: Bijkeuken
-#         entities:
-#           - entity: switch.adaptive_lighting_laundry
-#             name: Lamp
-#       - title: Balkon
-#         entities:
-#           - entity: switch.adaptive_lighting_outside
-#             name: Lamp
-#       - title: Toilet
-#         entities:
-#           - entity: switch.adaptive_lighting_toilet
-#             name: Lamp
-#       - title: Berging
-#         entities:
-#           - entity: switch.adaptive_lighting_berging
-#             name: Lamp

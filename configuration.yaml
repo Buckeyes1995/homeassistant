@@ -27,6 +27,13 @@ hydrawise:
 ifttt:
   key: !secret iftt_webhooks_api_key
 
+panel_iframe:
+  # Adds node-red to side panel menu
+  nodered:
+    title: Node-Red
+    icon: mdi:shuffle-variant
+    url: "http://10.0.0.150:1880/"
+
 automation: !include automations.yaml
 binary_sensor: !include binary_sensors.yaml
 cover: !include covers.yaml

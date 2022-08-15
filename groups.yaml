@@ -223,10 +223,10 @@ master_bedroom_light_group:
 master_bedroom_bed_lamp_group:
   name: Lamps
   entities:
-    - light.bed_night_light_tammy_master_bedroom
-    - light.tammy_s_bed_lamp_master_bedroom
-    - light.night_light_jim_master_bedroom
-    - light.tammy_s_bed_lamp_master_bedroom
+    - light.master_bedroom_bed_lamp_left
+    - light.master_bedroom_bed_lamp_right
+   # - light.night_light_jim_master_bedroom
+   # - light.bed_night_light_tammy_master_bedroom
 
 #master_batheroom_group:
 #  name: Master Bathroom Lights

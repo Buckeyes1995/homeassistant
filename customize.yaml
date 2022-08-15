@@ -110,13 +110,13 @@ fan.fan_guest_bedroom:
 #Front Porch
 light.fan_and_lights_switch_front_porch:
   friendly_name: Front Porch Fans and Lights
-#Front Office
-light.fan_and_light_switch_front_office:
-  friendly_name: Front Office Fan Light
-light.overhead_lights_dimmer_switch_front_office:
-  friendly_name: Front Office Overhead Lights
-light.desk_light_front_office:
-  friendly_name: Front Office Table Light
+# #Front Office
+# light.fan_and_light_switch_front_office:
+#   friendly_name: Front Office Fan Light
+# light.overhead_lights_dimmer_switch_front_office:
+#   friendly_name: Front Office Overhead Lights
+# light.desk_light_front_office:
+#   friendly_name: Front Office Table Light
 
 #Living Room
 light.overhead_lights_dimmer_switch_living_room:
@@ -146,11 +146,11 @@ light.fan_and_light_back_office:
 light.closet_light_back_office:
   friendly_name: Back Office Closet Light
 
-#Power Room
-light.fan_and_overhead_light_powder_room:
-  friendly_name: Powder Room Fan and Overhead Light
-light.vanity_light_powder_room:
-  friendly_name: Powder Room Vanity Light
+# #Power Room
+# light.fan_and_overhead_light_powder_room:
+#   friendly_name: Powder Room Fan and Overhead Light
+# light.vanity_light_powder_room:
+#   friendly_name: Powder Room Vanity Light
 #Master Bedroom
 light.fan_and_light_master_bedroom:
   friendly_name: Bedroom Fan and Light

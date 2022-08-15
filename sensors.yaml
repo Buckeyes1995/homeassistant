@@ -79,10 +79,10 @@
   api_key: !secret google_maps_api_key
 
 - platform: mqtt_room
-  device_id: "apple:1007:11-7"
+  device_id: "irk:7ea07914324d1c2af3c65006f08a40f6"
   name: 'Beacon - Jims Iphone'
   state_topic: 'espresense/rooms'
-  timeout: 5
+  timeout: 30
   away_timeout: 120
 
 - platform: mqtt_room
@@ -92,9 +92,23 @@
   timeout: 5
   away_timeout: 120
 
+# - platform: mqtt_room
+#   device_id: "apple:1005:9-8"
+#   name: 'Beacon - Jims Work Iphone'
+#   state_topic: 'espresense/rooms'
+#   timeout: 5
+#   away_timeout: 120
+
 - platform: mqtt_room
-  device_id: "apple:1005:9-8"
-  name: 'Beacon - Jims Work Iphone'
+  device_id: "apple:1007:11-12"
+  name: 'Beacon - Tammys Iphone'
+  state_topic: 'espresense/rooms'
+  timeout: 5
+  away_timeout: 120
+
+- platform: mqtt_room
+  device_id: "apple:1005:9-24"
+  name: 'Beacon - Tammys Apple Watch'
   state_topic: 'espresense/rooms'
   timeout: 5
   away_timeout: 120
