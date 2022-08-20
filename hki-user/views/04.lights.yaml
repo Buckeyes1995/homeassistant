@@ -173,6 +173,10 @@ lights:
         columns: 3
 
       ##########################################################################
+      ###                            GUEST BATHROOM                          ###
+      ##########################################################################
+
+      ##########################################################################
       ###                               HALLWAY                              ###
       ##########################################################################  
       - title: Hallway
@@ -198,7 +202,7 @@ lights:
       - title: Powder Room
         entities:
           - light.powder_room_vanity_light
-          - light.powder_room_fan_and_light
+          - fan.powder_room_exhaust_fan
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
@@ -206,7 +210,7 @@ lights:
       - title: Powder Room
         entities:
           - light.powder_room_vanity_light
-          - light.powder_room_fan_and_light
+          - fan.powder_room_exhaust_fan
         view_layout:
           show:
             mediaquery: "(min-width: 350px)"
@@ -217,15 +221,27 @@ lights:
       ##########################################################################  
       - title: Back Office
         entities:
-          - entity: light.fan_back_office
+          - entity: light.back_office_fan_light
             type: color-temp
-          - entity: light.closet_light_back_office
+          - entity: light.back_office_lights
             type: color-temp
-          - entity: light.overhead_lights_dimmer_back_office
+          - entity: light.back_office_closet_light
             type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Back Office
+        entities:
+          - entity: light.back_office_fan_light
+            type: color-temp
+          - entity: light.back_office_lights
+            type: color-temp
+          - entity: light.back_office_closet_light
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
         columns: 3
 
       ##########################################################################
@@ -247,61 +263,73 @@ lights:
           show:
             mediaquery: "(min-width: 350px)"
         columns: 3
-        
+
       ##########################################################################
       ###                           MASTER BEDROOM                           ###
       ##########################################################################  
       - title: Master Bedroom
         entities:
-          - entity: light.overhead_lights_master_bedroom
+          - entity: light.master_bedroom_lights
             type: color-temp
-          - entity: light.jim_s_bed_lamp
+          - entity: light.master_bedroom_bed_lamp_left
             type: color-temp
-          - entity: light.tammy_s_bed_lamp
+          - entity: light.master_bedroom_bed_lamp_right
+            type: color-temp
+          - entity: light.master_bedroom_bed_nightlight_left
+            type: color-temp
+          - entity: light.master_bedroom_bed_nightlight_right
+            type: color-temp
+          - entity: light.master_bedroom_closet_light
+            type: color-temp
+          - entity: light.master_bedroom_fan_light
             type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Master Bedroom
+        entities:
+          - entity: light.master_bedroom_lights
+            type: color-temp
+          - entity: light.master_bedroom_bed_lamp_left
+            type: color-temp
+          - entity: light.master_bedroom_bed_lamp_right
+            type: color-temp
+          - entity: light.master_bedroom_bed_nightlight_left
+            type: color-temp
+          - entity: light.master_bedroom_bed_nightlight_right
+            type: color-temp
+          - entity: light.master_bedroom_closet_light
+            type: color-temp
+          - entity: light.master_bedroom_fan_light
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
         columns: 3
 
       ##########################################################################
       ###                           MASTER BATHROOM                          ###
       ##########################################################################  
-      - title: Master Bedroom
+      - title: Master Bathroom
         entities:
-          - entity: light.master_bedroom_lights
+          - entity: light.master_bathroom_lights
             type: color-temp
-          - entity: light.master_bedroom_bed_lamp_left
+          - entity: light.master_bathroom_left_vanity_lights
             type: color-temp
-          - entity: light.master_bedroom_bed_lamp_right
-            type: color-temp
-          - entity: light.master_bedroom_bed_nightlight_left
-            type: color-temp
-          - entity: light.master_bedroom_bed_nightlight_right
-            type: color-temp
-          - entity: light.master_bedroom_closet_light
-            type: color-temp
-          - entity: light.master_bedroom_fan_light
+          - entity: light.master_bathroom_right_vanity_lights
             type: color-temp
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-      - title: Master Bedroom
+      - title: Master Bathroom
         entities:
-          - entity: light.master_bedroom_lights
+          - entity: light.master_bathroom_lights
             type: color-temp
-          - entity: light.master_bedroom_bed_lamp_left
+          - entity: light.master_bathroom_left_vanity_lights
             type: color-temp
-          - entity: light.master_bedroom_bed_lamp_right
-            type: color-temp
-          - entity: light.master_bedroom_bed_nightlight_left
-            type: color-temp
-          - entity: light.master_bedroom_bed_nightlight_right
-            type: color-temp
-          - entity: light.master_bedroom_closet_light
-            type: color-temp
-          - entity: light.master_bedroom_fan_light
+          - entity: light.master_bathroom_right_vanity_lights
             type: color-temp
         view_layout:
           show:

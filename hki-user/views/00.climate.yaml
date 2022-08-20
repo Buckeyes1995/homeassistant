@@ -16,7 +16,6 @@ climate:
       margin: 0px 8px  
   addons:
     thermostat:
-      # Small Screens
       - title: Thermostats
         box_shadow: none
         entities:
@@ -30,7 +29,6 @@ climate:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-      # Larger Screens
       - title: Thermostats
         entities:
           - entity: climate.main_floor
@@ -41,33 +39,38 @@ climate:
           show:
             mediaquery: "(min-width: 350px)"
         columns: 4
+    
     button:
-      # Small Screens
       - title: Fans
         entities:
-          - fan.fan_master_bedroom
-          - fan.fan_living_room
+          - fan.front_porch_fan
           - fan.fan_front_office
-          - fan.fan_back_office
-          - fan.fan_guest_bedroom
+          - fan.living_room_fan
+          - fan.guest_bedroom_fan
+          - fan.powder_room_exhaust_fan
+          - fan.back_office_fan
+          - fan.master_bedroom_fan
+          - fan.master_bathroom_exhaust_fan
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-      # Larger Screens
       - title: Fans
         entities:
-          - fan.fan_master_bedroom
-          - fan.fan_living_room
+          - fan.front_porch_fan
           - fan.fan_front_office
-          - fan.fan_back_office
-          - fan.fan_guest_bedroom
+          - fan.living_room_fan
+          - fan.guest_bedroom_fan
+          - fan.powder_room_exhaust_fan
+          - fan.back_office_fan
+          - fan.master_bedroom_fan
+          - fan.master_bathroom_exhaust_fan
         view_layout:
           show:
             mediaquery: "(min-width: 350px)"
         columns: 4
+
     button_graphs:
-      # Small Screens
       - title: Temperature
         line_color: crimson
         type: graph
@@ -75,25 +78,14 @@ climate:
           - sensor.average_house_temperature
           - sensor.main_floor_temperature
           - sensor.bedroom_temperature
-          - sensor.blink_deck_temperature
-          - sensor.blink_front_porch_left_temperature
-          - sensor.blink_front_porch_right_temperature
-          - sensor.blink_side_entrance_temperature
+          - sensor.front_porch_left_temperature
+          - sensor.front_porch_right_temperature
+          - sensor.side_porch_temperature
+          - sensor.deck_temperature
         view_layout:
           show:
             mediaquery: "(max-width: 350px)"
         columns: 3
-      - title: Humidity
-        line_color: cyan
-        type: graph
-        entities:
-         - sensor.main_floor_humidity
-         - sensor.bedroom_humidity
-        view_layout:
-          show:
-            mediaquery: "(max-width: 350px)"
-        columns: 3  
-      # Larger Screens
       - title: Temperature
         line_color: crimson
         type: graph
@@ -101,21 +93,35 @@ climate:
           - sensor.average_house_temperature
           - sensor.main_floor_temperature
           - sensor.bedroom_temperature
-          - sensor.blink_deck_temperature
-          - sensor.blink_front_porch_left_temperature
-          - sensor.blink_front_porch_right_temperature
-          - sensor.blink_side_entrance_temperature
+          - sensor.front_porch_left_temperature
+          - sensor.front_porch_right_temperature
+          - sensor.side_porch_temperature
+          - sensor.deck_temperature
         view_layout:
           show:
             mediaquery: "(min-width: 350px)"
-        columns: 4
+        columns: 4      
+      
       - title: Humidity
         line_color: cyan
         type: graph
         entities:
          - sensor.main_floor_humidity
-         - sensor.bedroom_humidity
+         - sensor.master_bedroom_humidity
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3  
+      - title: Humidity
+        line_color: cyan
+        type: graph
+        entities:
+         - sensor.main_floor_humidity
+         - sensor.master_bedroom_humidity
         view_layout:
           show:
             mediaquery: "(min-width: 350px)"
         columns: 3  
+
+
+

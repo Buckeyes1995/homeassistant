@@ -120,22 +120,21 @@ config:
 #          hide:
 #            source: true
 #            power_state: true
-#    cards:
-#      - title: Location
-#        icon: mdi:map
-#        padding: -5
-#        entities:
-#          - type: custom:hui-vertical-stack-card
-#            cards:
-#              - type: map
-#                dark_mode: true
-#                card_mod:
-#                  style: |
-#                    ha-card {
-#                      box-shadow: none;
-#                    }
-#                aspect_ratio: 2x1
-#                entities:
-#                  - person.jimmy
-#                  - person.stephanie
-#                  - person.tala
+    # cards:
+    #   - title: Location
+    #     icon: mdi:map
+    #     padding: -5
+    #     entities:
+    #       - type: custom:hui-vertical-stack-card
+    #         cards:
+    #           - type: map
+    #             dark_mode: true
+    #             card_mod:
+    #               style: |
+    #                 ha-card {
+    #                   box-shadow: none;
+    #                 }
+    #             aspect_ratio: 2x1
+    #             entities:
+    #               - person.jim
+    #               - person.tammy
