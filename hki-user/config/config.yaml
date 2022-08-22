@@ -12,26 +12,31 @@ config:
         icon: mdi:thermometer
         entity: sensor.current_climate_entities_on
         group_entity: group.all_climate_entities
-        grid_area: six
+        grid_area: seven
       - name: Doors
         icon: mdi:door
         entity: sensor.current_doors_open
         group_entity: group.all_door_sensor_entities
-        grid_area: five
+        grid_area: six
       - name: Windows
         icon: mdi:window-closed
         entity: sensor.current_windows_open
         group_entity: group.all_window_sensor_entities
-        grid_area: four
+        grid_area: five
       - name: Motion
         icon: mdi:motion-sensor
-        entity: sensor.current_binary_sensors_on
+        entity: sensor.current_motion_sensors_on
         group_entity: group.all_binary_sensor_entities
-        grid_area: three
+        grid_area: four
       - name: Devices
         icon: mdi:power-plug
         entity: sensor.current_devices_on
         group_entity: group.all_device_switch_entities
+        grid_area: three
+      - name: Fans
+        icon: mdi:fan
+        entity: sensor.current_fans_on
+        group_entity: group.all_fan_entities
         grid_area: two
       - name: Lights
         icon: mdi:lightbulb
@@ -68,21 +73,21 @@ config:
     persons:
       - name: Jim
         entity: person.jim
-        battery_entity: sensor.jims_iphone_battery_level
-        geocoded_location_entity: sensor.jims_iphone_geocoded_location
+        battery_entity: sensor.jims_iphone_13_pro_battery_level
+        geocoded_location_entity: sensor.jims_iphone_13_pro_geocoded_location
       - name: Tammy
         entity: person.tammy
         battery_entity: sensor.tammy_s_phone_battery_level
         geocoded_location_entity: sensor.tammy_s_phone_geocoded_location
     devices:
       - name: Jim's Ipad
-        entity: device_tracker.jamess_ipad_2
-        battery_entity: sensor.jamess_ipad_2_battery_level
+        entity: device_tracker.jims_ipad_air_ha_app
+        battery_entity: sensor.jims_ipad_air_battery_level
         entity_picture: /local/images/ipadair_small.png
-        geocoded_location_entity: sensor.jamess_ipad_2_geocoded_location
+        geocoded_location_entity: sensor.jims_ipad_air_geocoded_location
     vehicles:
       - name: Jaguar
-        entity: sensor.epace
+        entity: device_tracker.jaguar_epace
         entity_picture: /local/images/epace_small.png
 
 # PROFILE MENU *Please read the documentation before editing! https://github.com/jimz011/homekit-infused/docs/addons/profile.md
@@ -92,49 +97,49 @@ config:
     
       {{ state_attr('sensor.pretty_date', 'week_day') }}, {{ states('sensor.pretty_date') }}
     
-#    media_player:
-#      type: custom:state-switch
-#      entity: user
-#      states:
-#        Jimmy:
-#          type: custom:mini-media-player
-#          card_mod:
-#            style: |
-#              :host {
-#                --ha-card-background: black !important;
-#              }
-#          entity: media_player.spotify_jimmy
-#          artwork: cover
-#          hide:
-#            source: true
-#            power_state: true
-#        Stephanie:
-#          type: custom:mini-media-player
-#          card_mod:
-#            style: |
-#              :host {
-#                --ha-card-background: black !important;
-#              }
-#          entity: media_player.spotify_jimmy
-#          artwork: cover
-#          hide:
-#            source: true
-#            power_state: true
-    # cards:
-    #   - title: Location
-    #     icon: mdi:map
-    #     padding: -5
-    #     entities:
-    #       - type: custom:hui-vertical-stack-card
-    #         cards:
-    #           - type: map
-    #             dark_mode: true
-    #             card_mod:
-    #               style: |
-    #                 ha-card {
-    #                   box-shadow: none;
-    #                 }
-    #             aspect_ratio: 2x1
-    #             entities:
-    #               - person.jim
-    #               - person.tammy
+    media_player:
+      type: custom:state-switch
+      entity: user
+      states:
+        Jimmy:
+          type: custom:mini-media-player
+          card_mod:
+            style: |
+              :host {
+                --ha-card-background: black !important;
+              }
+          entity: media_player.jims_spotify
+          artwork: cover
+          hide:
+            source: true
+            power_state: true
+        Tammy:
+          type: custom:mini-media-player
+          card_mod:
+            style: |
+              :host {
+                --ha-card-background: black !important;
+              }
+          entity: media_player.tammys_spotify
+          artwork: cover
+          hide:
+            source: true
+            power_state: true
+      cards:
+        - title: Location
+          icon: mdi:map
+          padding: -5
+          entities:
+            - type: custom:hui-vertical-stack-card
+              cards:
+                - type: map
+                  dark_mode: true
+                  card_mod:
+                    style: |
+                      ha-card {
+                        box-shadow: none;
+                      }
+                  aspect_ratio: 2x1
+                  entities:
+                    - person.jim
+                    - person.tammy

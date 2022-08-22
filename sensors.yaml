@@ -74,7 +74,7 @@
 
 - platform: google_geocode
   name: EPace
-  origin: device_tracker.jaguar_device_tracker
+  origin: device_tracker.jaguar_epace
   options: 'street_number, street, city, state'
   api_key: !secret google_maps_api_key
 

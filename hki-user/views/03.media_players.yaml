@@ -120,21 +120,120 @@ media_2:
         path: media_4
         name: Apple TV
   addons:
-    media_player:
-      - title: Alexa
-        type: core
-        entities:
-          - media_player.back_office_alexa
-          - media_player.dining_room_alexa
-          - media_player.front_office_alexa
-          - media_player.guest_bathroom_alexa
-          - media_player.guest_bedroom_alexa
-          - media_player.kitchen_echo_show
-          - media_player.laundry_room_alexa
-          - media_player.living_room_alexa
-          - media_player.master_bathroom_alexa
-          - media_player.master_bedroom_alexa
-          - media_player.powder_room_alexa
+    custom:
+      - title:  Alexa
+        cards:  
+          - type: horizontal-stack  
+            cards:  
+              - entity: media_player.back_office_alexa
+                type: custom:mini-media-player
+                info: short
+                artwork: cover
+                source: icon
+                hide:
+                  mute: true
+                  icon: true
+                  power_state: false
+              - entity: media_player.dining_room_alexa
+                type: custom:mini-media-player
+                info: short
+                artwork: cover
+                source: icon
+                hide:
+                  mute: true
+                  icon: true
+                  power_state: false
+          -  type: horizontal-stack  
+             cards:  
+                - entity: media_player.front_office_alexa
+                  type: custom:mini-media-player
+                  info: short
+                  artwork: cover
+                  source: icon
+                  hide:
+                    mute: true
+                    icon: true
+                    power_state: false        
+                - entity: media_player.guest_bathroom_alexa
+                  type: custom:mini-media-player
+                  info: short
+                  artwork: cover
+                  source: icon
+                  hide:
+                    mute: true
+                    icon: true
+                    power_state: false          
+          -  type: horizontal-stack  
+             cards: 
+                - entity: media_player.guest_bathroom_alexa
+                  type: custom:mini-media-player
+                  info: short
+                  artwork: cover
+                  source: icon
+                  hide:
+                    mute: true
+                    icon: true
+                    power_state: false          
+                - entity: media_player.kitchen_echo_show
+                  type: custom:mini-media-player
+                  info: short
+                  artwork: cover
+                  source: icon
+                  hide:
+                    mute: true
+                    icon: true
+                    power_state: false      
+          -  type: horizontal-stack  
+             cards: 
+                - entity: media_player.laundry_room_alexa
+                  type: custom:mini-media-player
+                  info: short
+                  artwork: cover
+                  source: icon
+                  hide:
+                    mute: true
+                    icon: true
+                    power_state: false          
+                - entity: media_player.living_room_alexa
+                  type: custom:mini-media-player
+                  info: short
+                  artwork: cover
+                  source: icon
+                  hide:
+                    mute: true
+                    icon: true
+                    power_state: false  
+          -  type: horizontal-stack  
+             cards:                             
+               - entity: media_player.master_bathroom_alexa
+                 type: custom:mini-media-player
+                 info: short
+                 artwork: cover
+                 source: icon
+                 hide:
+                   mute: true
+                   icon: true
+                   power_state: false    
+               - entity: media_player.master_bathroom_alexa
+                 type: custom:mini-media-player
+                 info: short
+                 artwork: cover
+                 source: icon
+                 hide:
+                   mute: true
+                   icon: true
+                   power_state: false    
+          -  type: horizontal-stack  
+             cards:                   
+               - entity: media_player.master_bathroom_alexa
+                 type: custom:mini-media-player
+                 info: short
+                 artwork: cover
+                 source: icon
+                 hide:
+                   mute: true
+                   icon: true
+                   power_state: false    
 
 #Spotify
 media_3:
@@ -173,7 +272,11 @@ media_3:
         type: core
         entities:
           - media_player.jims_spotify
-          - media_player.tammys_spotify
+          - media_player.tammys_spotifys
+
+
+
+    
           
 # # Upcoming Media
 # media_1:

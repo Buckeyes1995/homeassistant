@@ -3,7 +3,6 @@
 # Fill this file to have the badges and device counters work in HKI.
 # You can use these sensors in your badges.
 
-
 # All Radiator Valves or Climate entities (ONLY climate entities can be used here!, if you have a single thermostat put it here as well)
 all_climate_entities:
   entities:
@@ -13,11 +12,24 @@ all_climate_entities:
 # All Fans (Enter all your fans in here)
 all_fan_entities:
   entities:
-    - fan.fan_master_bedroom
-    - fan.fan_living_room
+    - fan.back_office_fan
     - fan.fan_front_office
-    - fan.fan_back_office
-    - fan.fan_guest_bedroom
+    - fan.front_porch_fan
+    - fan.guest_bedroom_fan
+    - fan.living_room_fan
+    - fan.master_bathroom_exhaust_fan
+    - fan.master_bathroom_exhaust_fan_switch
+    - fan.master_bedroom_fan
+    - fan.powder_room_exhaust_fan
+    - fan.back_office_fan
+    - fan.fan_front_office
+    - fan.front_porch_fan
+    - fan.guest_bedroom_fan
+    - fan.living_room_fan
+    - fan.master_bathroom_exhaust_fan
+    - fan.master_bathroom_exhaust_fan_switch
+    - fan.master_bedroom_fan
+    - fan.powder_room_exhaust_fan
 
 # Window Sensors (This is used in the header badges, without this the header badge won't work)
 all_window_sensor_entities:
@@ -43,51 +55,285 @@ all_detector_entities:
 # All Binary Sensors (put all your binary sensors here e.g. smoke/gas/fire/door/window/motion etc. You can use this as a counter on the security button)
 all_binary_sensor_entities:
   entities:
-    
+      - binary_sensor.bedroom_occupancy
+      - binary_sensor.blink_deck_battery
+      - binary_sensor.blink_deck_camera_armed
+      - binary_sensor.blink_deck_motion_detected
+      - binary_sensor.blink_front_porch_left_battery
+      - binary_sensor.blink_front_porch_left_camera_armed
+      - binary_sensor.blink_front_porch_left_motion_detected
+      - binary_sensor.blink_front_porch_right_battery
+      - binary_sensor.blink_front_porch_right_camera_armed
+      - binary_sensor.blink_front_porch_right_motion_detected
+      - binary_sensor.blink_side_entrance_battery
+      - binary_sensor.blink_side_entrance_camera_armed
+      - binary_sensor.blink_side_entrance_motion_detected
+      - binary_sensor.ds_1_drive_1_below_min_remaining_life
+      - binary_sensor.ds_1_drive_1_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_drive_2_below_min_remaining_life
+      - binary_sensor.ds_1_drive_2_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_drive_3_below_min_remaining_life
+      - binary_sensor.ds_1_drive_3_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_drive_4_below_min_remaining_life
+      - binary_sensor.ds_1_drive_4_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_security_status
+      - binary_sensor.espresense_back_office
+      - binary_sensor.espresense_front_office
+      - binary_sensor.espresense_kitchen
+      - binary_sensor.espresense_living_room
+      - binary_sensor.espresense_living_room_2
+      - binary_sensor.espresense_master_bedroom
+      - binary_sensor.flower_beds_watering
+      - binary_sensor.front_door_ding
+      - binary_sensor.front_door_motion
+      - binary_sensor.jims_ipad_air_focus
+      - binary_sensor.jims_iphone_13_pro_focus
+      - binary_sensor.lawn_controller_status
+      - binary_sensor.left_front_yard_watering
+      - binary_sensor.living_room_microphone
+      - binary_sensor.main_floor_occupancy
+      - binary_sensor.remote_ui
+      - binary_sensor.right_front_yar_watering
+      - binary_sensor.tammy_s_phone_focus
+      - binary_sensor.updater
+      - binary_sensor.zone_4_watering
+      - binary_sensor.zone_5_watering
+      - binary_sensor.zone_6_watering
+      - binary_sensor.bedroom_occupancy
+      - binary_sensor.blink_deck_battery
+      - binary_sensor.blink_deck_camera_armed
+      - binary_sensor.blink_deck_motion_detected
+      - binary_sensor.blink_front_porch_left_battery
+      - binary_sensor.blink_front_porch_left_camera_armed
+      - binary_sensor.blink_front_porch_left_motion_detected
+      - binary_sensor.blink_front_porch_right_battery
+      - binary_sensor.blink_front_porch_right_camera_armed
+      - binary_sensor.blink_front_porch_right_motion_detected
+      - binary_sensor.blink_side_entrance_battery
+      - binary_sensor.blink_side_entrance_camera_armed
+      - binary_sensor.blink_side_entrance_motion_detected
+      - binary_sensor.ds_1_drive_1_below_min_remaining_life
+      - binary_sensor.ds_1_drive_1_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_drive_2_below_min_remaining_life
+      - binary_sensor.ds_1_drive_2_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_drive_3_below_min_remaining_life
+      - binary_sensor.ds_1_drive_3_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_drive_4_below_min_remaining_life
+      - binary_sensor.ds_1_drive_4_exceeded_max_bad_sectors
+      - binary_sensor.ds_1_security_status
+      - binary_sensor.espresense_back_office
+      - binary_sensor.espresense_front_office
+      - binary_sensor.espresense_kitchen
+      - binary_sensor.espresense_living_room
+      - binary_sensor.espresense_living_room_2
+      - binary_sensor.espresense_master_bedroom
+      - binary_sensor.flower_beds_watering
+      - binary_sensor.front_door_ding
+      - binary_sensor.front_door_motion
+      - binary_sensor.jims_ipad_air_focus
+      - binary_sensor.jims_iphone_13_pro_focus
+      - binary_sensor.lawn_controller_status
+      - binary_sensor.left_front_yard_watering
+      - binary_sensor.living_room_microphone
+      - binary_sensor.main_floor_occupancy
+      - binary_sensor.remote_ui
+      - binary_sensor.right_front_yar_watering
+      - binary_sensor.tammy_s_phone_focus
+      - binary_sensor.updater
+      - binary_sensor.zone_4_watering
+      - binary_sensor.zone_5_watering
+      - binary_sensor.zone_6_watering
+
 # All Lights
 all_light_entities:
   entities:
-    # Front Office
-    - light.overhead_lights_dimmer_front_office
-    - light.fan_front_office
-    - light.desk_light_front_office
-    # Living Room
-    - light.overhead_lights_dimmer_living_room
-    - light.fan_living_room
-    - light.floor_lamp_living_room
-    # Kitchen
-    - light.overhead_lights_dimmer_kitchen
-    - light.pendant_lights_kitchen
-    # Hallway
-    - light.overhead_lights_hallway
-    - light.overhead_lights_coat_closet_hallway
-    # Guest Bedroom
-    - light.fan_guest_bedroom
-    
-    # Guest Bathroom
-
-    # Back Office
-    - light.overhead_lights_dimmer_back_office
-    - light.fan_back_office
-    - light.closet_light_back_office
-    # Powder Room
-    - light.vanity_light_powder_room
-    # Deck
-    - light.light_deck
-    # Master Bedroom
-    - light.overhead_lights_master_bedroom
-    - light.fan_master_bedroom
-    - light.bed_night_light_tammy_master_bedroom
-    - light.bed_night_light_jim_master_bedroom
-    - light.tammy_s_bed_lamp
-    - light.jim_s_bed_lamp
-    # Master Bathroom
-    - light.left_vanity_light_master_bathroom
-    - light.right_vanity_light_master_bathroom
+    - light.back_office_closet_light
+    - light.back_office_fan_light
+    - light.back_office_lights
+    - light.deck_light
+    - light.front_office_desk_lamp
+    - light.front_office_fan_light
+    - light.front_office_lights
+    - light.guest_bedroom_closet_light
+    - light.guest_bedroom_fan_light
+    - light.hallway_coat_closet_light
+    - light.hallway_lights
+    - light.kitchen_lights
+    - light.kitchen_pendant_lights
+    - light.living_room_fan_light
+    - light.living_room_floor_lamp
+    - light.living_room_lights
+    - light.master_bathroom_lights
+    - light.master_bathroom_right_vanity_lights
+    - light.master_bedroom_bed_lamp_left
+    - light.master_bedroom_bed_lamp_right
+    - light.master_bedroom_bed_nightlight_left
+    - light.master_bedroom_bed_nightlight_right
+    - light.master_bedroom_closet_light
+    - light.master_bedroom_fan_light
+    - light.master_bedroom_lights
+    - light.powder_room_vanity_light
+    - light.side_porch_light
+    - light.back_office_closet_light
+    - light.back_office_fan_light
+    - light.back_office_lights
+    - light.deck_light
+    - light.front_office_desk_lamp
+    - light.front_office_fan_light
+    - light.front_office_lights
+    - light.guest_bedroom_closet_light
+    - light.guest_bedroom_fan_light
+    - light.hallway_coat_closet_light
+    - light.hallway_lights
+    - light.kitchen_lights
+    - light.kitchen_pendant_lights
+    - light.living_room_fan_light
+    - light.living_room_floor_lamp
+    - light.living_room_lights
+    - light.master_bathroom_lights
+    - light.master_bathroom_right_vanity_lights
+    - light.master_bedroom_bed_lamp_left
+    - light.master_bedroom_bed_lamp_right
+    - light.master_bedroom_bed_nightlight_left
+    - light.master_bedroom_bed_nightlight_right
+    - light.master_bedroom_closet_light
+    - light.master_bedroom_fan_light
+    - light.master_bedroom_lights
+    - light.powder_room_vanity_light
+    - light.side_porch_light
 
 all_device_switch_entities:
   entities:
-    
+    - switch.back_office_do_not_disturb_switch
+    - switch.back_office_fan_and_light_switch
+    - switch.back_office_repeat_switch
+    - switch.back_office_scene_controller
+    - switch.back_office_shuffle_switch
+    - switch.deck_light
+    - switch.dining_room_do_not_disturb_switch
+    - switch.dining_room_repeat_switch
+    - switch.dining_room_shuffle_switch
+    - switch.ds_1_surveillance_station_home_mode
+    - switch.echo_show_do_not_disturb_switch
+    - switch.echo_show_repeat_switch
+    - switch.echo_show_shuffle_switch
+    - switch.espresense_back_office_active_scan
+    - switch.espresense_back_office_arduino_ota
+    - switch.espresense_back_office_auto_update
+    - switch.espresense_back_office_prerelease
+    - switch.espresense_front_office_active_scan
+    - switch.espresense_front_office_arduino_ota
+    - switch.espresense_front_office_auto_update
+    - switch.espresense_front_office_prerelease
+    - switch.espresense_front_office_status_led
+    - switch.espresense_front_office_status_led_2
+    - switch.espresense_kitchen_active_scan
+    - switch.espresense_kitchen_arduino_ota
+    - switch.espresense_kitchen_auto_update
+    - switch.espresense_kitchen_prerelease
+    - switch.espresense_kitchen_status_led
+    - switch.espresense_living_room_active_scan
+    - switch.espresense_living_room_active_scan_2
+    - switch.espresense_living_room_arduino_ota
+    - switch.espresense_living_room_arduino_ota_2
+    - switch.espresense_living_room_auto_update
+    - switch.espresense_living_room_auto_update_2
+    - switch.espresense_living_room_prerelease
+    - switch.espresense_living_room_prerelease_2
+    - switch.espresense_living_room_status_led
+    - switch.espresense_living_room_status_led_2
+    - switch.espresense_master_bedroom_active_scan
+    - switch.espresense_master_bedroom_arduino_ota
+    - switch.espresense_master_bedroom_auto_update
+    - switch.espresense_master_bedroom_prerelease
+    - switch.espresense_master_bedroom_status_led
+    - switch.everywhere_do_not_disturb_switch
+    - switch.everywhere_repeat_switch
+    - switch.everywhere_shuffle_switch
+    - switch.flower_beds_automatic_watering
+    - switch.flower_beds_manual_watering
+    - switch.front_office_do_not_disturb_switch
+    - switch.front_office_fan
+    - switch.front_office_repeat_switch
+    - switch.front_office_scene_controller
+    - switch.front_office_shuffle_switch
+    - switch.front_porch_fan_and_lights
+    - switch.guest_bathroom_do_not_disturb_switch
+    - switch.guest_bathroom_repeat_switch
+    - switch.guest_bathroom_shuffle_switch
+    - switch.guest_bedroom_closet_light_switch
+    - switch.guest_bedroom_do_not_disturb_switch
+    - switch.guest_bedroom_fan_and_light_switch
+    - switch.guest_bedroom_repeat_switch
+    - switch.guest_bedroom_scene_controller
+    - switch.guest_bedroom_shuffle_switch
+    - switch.hallway_coat_closet_light_switch
+    - switch.hallway_lights_switch
+    - switch.james_s_alexa_app_for_pc_do_not_disturb_switch
+    - switch.james_s_alexa_app_for_pc_repeat_switch
+    - switch.james_s_alexa_app_for_pc_shuffle_switch
+    - switch.james_s_samsung_tv_2020_u_do_not_disturb_switch
+    - switch.james_s_samsung_tv_2020_u_repeat_switch
+    - switch.james_s_samsung_tv_2020_u_shuffle_switch
+    - switch.james_s_tv_do_not_disturb_switch
+    - switch.james_s_tv_repeat_switch
+    - switch.james_s_tv_shuffle_switch
+    - switch.kitchen_pendant_lights
+    - switch.laundry_room_do_not_disturb_switch
+    - switch.laundry_room_repeat_switch
+    - switch.laundry_room_shuffle_switch
+    - switch.left_front_yard_automatic_watering
+    - switch.left_front_yard_manual_watering
+    - switch.living_room_do_not_disturb_switch
+    - switch.living_room_fan
+    - switch.living_room_loudness
+    - switch.living_room_repeat_switch
+    - switch.living_room_shuffle_switch
+    - switch.living_room_surround_music_full_volume
+    - switch.master_bathroom_do_not_disturb_switch
+    - switch.master_bathroom_exhaust_fan_switch
+    - switch.master_bathroom_left_vanity_light_switch
+    - switch.master_bathroom_light_switch
+    - switch.master_bathroom_repeat_switch
+    - switch.master_bathroom_right_vanity_light_switch
+    - switch.master_bathroom_shuffle_switch
+    - switch.master_bedroom_bed_lamp_left
+    - switch.master_bedroom_bed_lamp_right
+    - switch.master_bedroom_closet_light_switch
+    - switch.master_bedroom_do_not_disturb_switch
+    - switch.master_bedroom_fan_and_light_switch
+    - switch.master_bedroom_light_switch
+    - switch.master_bedroom_repeat_switch
+    - switch.master_bedroom_scene_controller
+    - switch.master_bedroom_shuffle_switch
+    - switch.powder_room_do_not_disturb_switch
+    - switch.powder_room_fan_and_light_switch
+    - switch.powder_room_repeat_switch
+    - switch.powder_room_shuffle_switch
+    - switch.powder_room_vanity_light_switch
+    - switch.right_front_yar_automatic_watering
+    - switch.right_front_yar_manual_watering
+    - switch.scene_capable_switch_on_off
+    - switch.side_porch_light_switch
+    - switch.sonos_do_not_disturb_switch
+    - switch.sonos_living_room_crossfade
+    - switch.sonos_living_room_night_sound
+    - switch.sonos_living_room_speech_enhancement
+    - switch.sonos_living_room_subwoofer_enabled
+    - switch.sonos_living_room_surround_enabled
+    - switch.sonos_repeat_switch
+    - switch.sonos_shuffle_switch
+    - switch.sonos_sonos_do_not_disturb_switch
+    - switch.sonos_sonos_repeat_switch
+    - switch.sonos_sonos_shuffle_switch
+    - switch.this_device_do_not_disturb_switch
+    - switch.zone_4_automatic_watering
+    - switch.zone_4_manual_watering
+    - switch.zone_5_automatic_watering
+    - switch.zone_5_manual_watering
+    - switch.zone_6_automatic_watering
+    - switch.zone_6_manual_watering
+
 # All Covers
 all_cover_entities:
   entities:

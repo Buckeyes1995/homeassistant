@@ -99,6 +99,26 @@ lights:
       ##########################################################################
       ###                              DINING ROOM                           ###
       ##########################################################################
+      - title: Dining Room
+        entities:
+          - entity: light.dining_room_chandelier
+            type: color-temp
+          - entity: light.dining_room_overhead_lights
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(max-width: 350px)"
+        columns: 3
+      - title: Dining Room
+        entities:
+          - entity: light.dining_room_chandelier
+            type: color-temp
+          - entity: light.dining_room_overhead_lights
+            type: color-temp
+        view_layout:
+          show:
+            mediaquery: "(min-width: 350px)"
+        columns: 3
 
       ##########################################################################
       ###                                KITCHEN                             ###
