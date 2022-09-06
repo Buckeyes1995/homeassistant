@@ -1,0 +1,189 @@
+carstest:
+  # subtitle: >
+  #   [[[
+  #     if (states['device_tracker.jag_device_tracker'].state == "home") return `The Jaugar is at home.`;
+  #     else return `The Jaguar is at {states['device_tracker.jag_device_tracker'].state}.`;
+  #   ]]]
+  icon: mdi:car
+  show_in_favorites: true
+  show_in_menu: true
+  #button_badge: sensor.average_house_temperature
+  #button_label: >
+  #  [[[ 
+  #    if (states['sensor.current_climate_entities_on'].state == 0) return `Thermostats Off`;
+  #    else return `${states['sensor.current_climate_entities_on'].state} Thermostats On`;
+  #  ]]]
+  addons:
+    custom:
+      - title: hide
+        cards:
+          - type: 'custom:vertical-stack-in-card'
+            title: Tesla Model 3
+            cards:
+
+              - type: picture-elements
+                card_mod:
+                  class: hki
+                image: /local/images/model3.png
+                elements:
+                  # DOOR LOCKS
+                  - type: state-icon
+                    icon: mdi:car-key
+                    entity: lock.lycklig_door_lock
+                    tap_action: 
+                      action:  toggle
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 10%
+                      top: 5%
+                  - type: state-label
+                    entity: lock.lycklig_door_lock
+                    style:
+                      color: Black
+                      left: 10%
+                      top: 13%
+
+                  # ALARM / SENTRY MODE               
+                  - type: state-icon
+                    icon: mdi:security
+                    entity: switch.lycklig_sentry_mode_switch
+                    tap_action: 
+                      action: toggle
+                    #state_color: false
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 30%
+                      top: 5%
+                  - type: state-label
+                    entity: switch.lycklig_sentry_mode_switch
+                    style:
+                      color: black
+                      left: 30%
+                      top: 13%
+
+                  # FRUNK        
+                  - type: state-icon
+                    icon: mdi:car
+                    entity: lock.lycklig_frunk_lock
+                    tap_action: 
+                      action: toggle
+                      confirmation: 
+                        text: Open the Frunk?
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 50%
+                      top: 5%
+                  - type: state-label
+                    entity: lock.lycklig_frunk_lock
+                    style:
+                      color: black
+                      left: 50%
+                      top: 13%
+
+                  # TRUNK        
+                  - type: state-icon
+                    icon: mdi:car-back
+                    entity: lock.lycklig_trunk_lock
+                    tap_action: 
+                      action: toggle
+                      confirmation: 
+                        text: Open the trunk?
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 70%
+                      top: 5%
+                  - type: state-label
+                    entity: lock.lycklig_trunk_lock
+                    style:
+                      color: black
+                      left: 70%
+                      top: 13%
+
+                  # CHARGER        
+                  - type: state-icon
+                    icon: mdi:ev-plug-tesla
+                    entity: lock.lycklig_charger_door_lock
+                    tap_action: 
+                      action: toggle
+                      confirmation: 
+                        text: Open the trunk?
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 90%
+                      top: 5%
+                  - type: state-label
+                    entity: lock.lycklig_charger_door_lock
+                    style:
+                      color: black
+                      left: 90%
+                      top: 13%
+
+                  # CHARGING STATE
+                  - type: state-icon
+                    icon: mdi:ev-station
+                    entity: binary_sensor.lycklig_charger_sensor
+                    #tap_action: more_info
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 30%
+                      top: 89%
+                  - type: state-label
+                    entity: binary_sensor.lycklig_charger_sensor
+                    attribute: charging_state
+                    style:
+                      color: black
+                      left: 30%
+                      top: 97%
+                  
+                  # RANGE
+                  - type: state-icon
+                    entity: sensor.lycklig_range
+                    icon: mdi:gas-station
+                    #tap_action: more_info
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 70%
+                      top: 89%
+                  - type: state-label
+                    entity: sensor.lycklig_range
+                    style:
+                      color: black
+                      left: 70%
+                      top: 97%
+                 
+                 # TOTAL MILEAGE
+                  - type: state-icon
+                    icon: mdi:road
+                    entity: sensor.lycklig_odometer
+                    #tap_action:
+                    #  action: navigate
+                    #  navigation_path: /homekit-infused/menu
+                    style:
+                      '--paper-item-icon-color': blue
+                      left: 90%
+                      top: 89%
+                  - type: state-label
+                    entity: sensor.lycklig_odometer
+                    style:
+                      color: black
+                      left: 90%
+                      top: 97% 
+
+              - type: custom:bar-card
+                entities:
+                  # BATTERY PERCENTAGE
+                  - entity: sensor.lycklig_battery_sensor
+                    target: '90'
+                    color: blue
+                    icon: mdi:battery-40
+                    name: ' '
+                    severity:
+                      - color: Red
+                        from: 0
+                        to: 20
+                      - color: Orange
+                        from: 21
+                        to: 49
+                      - color: Blue
+                        from: 50
+                        to: 100              
