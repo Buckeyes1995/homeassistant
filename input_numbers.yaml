@@ -1,3 +1,17 @@
+    all_covers:
+      name: All Covers
+      initial: 0
+      min: 0
+      max: 100
+      step: 1    
+
+    front_office_covers:
+      name: Front Office Covers
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
     front_office_cover_front:
       name: Front Office Cover - Front
       initial: 0
@@ -7,6 +21,13 @@
 
     front_office_cover_side:
       name: Front Office Cover - Side
+      initial: 0
+      min: 0
+      max: 100
+      step: 1
+
+    living_room_covers:
+      name: Living Room Covers
       initial: 0
       min: 0
       max: 100

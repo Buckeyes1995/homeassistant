@@ -66,6 +66,16 @@
           Closed
         {% endif %}
 
+- platform: template
+  sensors:
+    lycklig_range:
+      value_template: "{{ states('sensor.lycklig_range_sensor') | int }}"
+
+- platform: template
+  sensors:
+    lycklig_odometer:
+      value_template: "{{ '{0:_.0f}'.format(states.sensor.lycklig_mileage_sensor.state | int).replace('_', ',')}}"
+
 - platform: google_geocode
   name: Jim's Ipad
   origin: device_tracker.jamess_ipad_2
@@ -86,7 +96,7 @@
   away_timeout: 120
 
 - platform: mqtt_room
-  device_id: "apple:1005:9-24"
+  device_id: "irk:014364bfbd1ed7ec853e0b28c2fed326"
   name: 'Beacon - Jims Apple Watch'
   state_topic: 'espresense/rooms'
   timeout: 5
@@ -107,7 +117,7 @@
   away_timeout: 120
 
 - platform: mqtt_room
-  device_id: "apple:1005:9-24"
+  device_id: "irk:3a4dfee31144dca22a278fcfad35a2d2"
   name: 'Beacon - Tammys Apple Watch'
   state_topic: 'espresense/rooms'
   timeout: 5

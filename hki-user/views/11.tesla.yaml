@@ -1,0 +1,120 @@
+# type: picture-elements
+# image: !file /local/images/other/tesla.png
+# elements:
+# {% set sensors = [
+#   ('binary_sensor.tesla_model_3_online_sensor', False),
+#   ('binary_sensor.tesla_model_3_parking_brake_sensor', True),
+#   ('climate.tesla_model_3_hvac_climate_system', False),
+#   ('device_tracker.tesla_model_3_location_tracker', False),
+#   ('sensor.tesla_model_3_mileage_sensor', False)
+# ]
+# %}
+# {% set lock_sensors = [
+#   ('Charger door', 'lock.tesla_model_3_charger_door_lock'),
+#   ('Doors', 'lock.tesla_model_3_door_lock'),
+#   ('Frunk', 'lock.tesla_model_3_frunk_lock'),
+#   ('Trunk','lock.tesla_model_3_trunk_lock')
+# ]
+# %}
+# {% set battery_sensors = [
+#   ('Battery', 'sensor.tesla_model_3_battery_sensor'),
+#   ('Charging', 'binary_sensor.tesla_model_3_charger_sensor'),
+#   ('Range', 'sensor.tesla_model_3_range_sensor')
+# ]
+# %}
+# {% set temp_sensors = [
+#   ('Inside', 'sensor.tesla_model_3_temperature_sensor_inside'),
+#   ('Outside' ,'sensor.tesla_model_3_temperature_sensor_outside')
+# ] 
+# %}
+# {% for g in sensors %}
+# - type: state-icon
+#   entity: {{ g.0 }}
+#   style:
+#     right: 0
+#     top: 5px
+#     margin-top: {{ loop.index0*32 }}px
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     "--paper-item-icon-color": white
+# - type: state-label
+#   entity: {{ g.0 }}
+#   {% if g.1 %}attribute: 'friendly_name'{% endif %}
+#   style:
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     top: 5px
+#     right: 30px
+#     margin-top: {{ loop.index0*32 }}px
+# {% endfor -%}
+# {% for g in lock_sensors %}
+# - type: state-icon
+#   entity: {{ g.1 }}
+#   style:
+#     left: 0
+#     top: 5px
+#     margin-top: {{ loop.index0*32 }}px
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     "--paper-item-icon-color": white
+# - type: state-label
+#   entity: {{ g.1 }}
+#   title: {{ g.0 }}
+#   attribute: 'friendly_name'
+#   style:
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     top: 5px
+#     left: 30px
+#     margin-top: {{ loop.index0*32 }}px
+# {% endfor -%}
+# {% for g in battery_sensors %}
+# - type: state-icon
+#   entity: {{ g.1 }}
+#   style:
+#     left: 0
+#     bottom: 10px
+#     margin-bottom: {{ loop.index0*32 }}px
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     "--paper-item-icon-color": white
+# - type: state-label
+#   entity: {{ g.1 }}
+#   title: {{ g.0 }}
+#   prefix: "{{ g.0 }}: "
+#   style:
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     bottom: 5px
+#     left: 30px
+#     margin-bottom: {{ loop.index0*32 }}px
+# {% endfor -%}
+# {% for g in temp_sensors %}
+# - type: state-icon
+#   entity: {{ g.1 }}
+#   style:
+#     right: 0
+#     bottom: 10px
+#     margin-bottom: {{ loop.index0*32 }}px
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     "--paper-item-icon-color": white
+# - type: state-label
+#   entity: {{ g.1 }}
+#   title: {{ g.0 }}
+#   prefix: "{{ g.0 }}: "
+#   style:
+#     transform: initial
+#     font-size: 1em
+#     line-height: 2em
+#     bottom: 5px
+#     right: 30px
+#     margin-bottom: {{ loop.index0*32 }}px
+# {% endfor -%}

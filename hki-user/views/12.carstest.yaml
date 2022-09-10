@@ -51,7 +51,8 @@ carstest:
                       action: toggle
                     #state_color: false
                     style:
-                      '--paper-item-icon-color': blue
+                      '--paper-item-icon-color': rgba(181,142,49,1)
+                      '--paper-item-icon-active-color': blue
                       left: 30%
                       top: 5%
                   - type: state-label
@@ -132,7 +133,7 @@ carstest:
                     attribute: charging_state
                     style:
                       color: black
-                      left: 30%
+                      left: 10%
                       top: 97%
                   
                   # RANGE
@@ -148,7 +149,7 @@ carstest:
                     entity: sensor.lycklig_range
                     style:
                       color: black
-                      left: 70%
+                      left: 30%
                       top: 97%
                  
                  # TOTAL MILEAGE
@@ -166,7 +167,7 @@ carstest:
                     entity: sensor.lycklig_odometer
                     style:
                       color: black
-                      left: 90%
+                      left: 50%
                       top: 97% 
 
               - type: custom:bar-card

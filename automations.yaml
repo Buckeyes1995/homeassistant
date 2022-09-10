@@ -45,3 +45,11 @@
   action:
     - service: ifttt.trigger
       data_template: {"event":"Blinds_living_room_front", "value1":"{{trigger.to_state.state | int}}"}
+
+- alias: Blind Automation Front Office
+  trigger:
+    platform: state
+    entity_id: group.front_office_shades
+  action:
+    - service: ifttt.trigger
+      data_template: {"event":"Blinds_front_office", "value1":"{{trigger.to_state.state | int}}"}

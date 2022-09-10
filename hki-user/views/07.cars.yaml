@@ -97,4 +97,202 @@ cars:
                   left: 90%
                   top: 97%
 
-  
+          # - type: picture-elements
+          #   image: !file /local/images/model3.png
+          #   elements:
+          #   {% set sensors = [
+          #     ('binary_sensor.lycklig_online_sensor', False),
+          #     ('binary_sensor.lycklig_parking_brake_sensor', True),
+          #     ('climate.lycklig_hvac_climate_system', False),
+          #     ('device_tracker.lycklig_location_tracker', False),
+          #     ('sensor.lycklig_mileage_sensor', False)
+          #   ]
+          #   %}
+          #   {% set lock_sensors = [
+          #     ('Charger door', 'lock.lycklig_charger_door_lock'),
+          #     ('Doors', 'lock.lycklig_door_lock'),
+          #     ('Frunk', 'lock.lycklig_frunk_lock'),
+          #     ('Trunk','lock.lycklig_trunk_lock')
+          #   ]
+          #   %}
+          #   {% set battery_sensors = [
+          #     ('Battery', 'sensor.lycklig_battery_sensor'),
+          #     ('Charging', 'binary_sensor.lycklig_charger_sensor'),
+          #     ('Range', 'sensor.lycklig_range_sensor')
+          #   ]
+          #   %}
+          #   {% set temp_sensors = [
+          #     ('Inside', 'sensor.lycklig_temperature_sensor_inside'),
+          #     ('Outside' ,'sensor.lycklig_temperature_sensor_outside')
+          #   ] 
+          #   %}
+          #   {% for g in sensors %}
+          #   - type: state-icon
+          #     entity: {{ g.0 }}
+          #     style:
+          #       right: 0
+          #       top: 5px
+          #       margin-top: {{ loop.index0*32 }}px
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       "--paper-item-icon-color": white
+          #   - type: state-label
+          #     entity: {{ g.0 }}
+          #     {% if g.1 %}attribute: 'friendly_name'{% endif %}
+          #     style:
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       top: 5px
+          #       right: 30px
+          #       margin-top: {{ loop.index0*32 }}px
+          #   {% endfor -%}
+          #   {% for g in lock_sensors %}
+          #   - type: state-icon
+          #     entity: {{ g.1 }}
+          #     style:
+          #       left: 0
+          #       top: 5px
+          #       margin-top: {{ loop.index0*32 }}px
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       "--paper-item-icon-color": white
+          #   - type: state-label
+          #     entity: {{ g.1 }}
+          #     title: {{ g.0 }}
+          #     attribute: 'friendly_name'
+          #     style:
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       top: 5px
+          #       left: 30px
+          #       margin-top: {{ loop.index0*32 }}px
+          #   {% endfor -%}
+          #   {% for g in battery_sensors %}
+          #   - type: state-icon
+          #     entity: {{ g.1 }}
+          #     style:
+          #       left: 0
+          #       bottom: 10px
+          #       margin-bottom: {{ loop.index0*32 }}px
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       "--paper-item-icon-color": white
+          #   - type: state-label
+          #     entity: {{ g.1 }}
+          #     title: {{ g.0 }}
+          #     prefix: "{{ g.0 }}: "
+          #     style:
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       bottom: 5px
+          #       left: 30px
+          #       margin-bottom: {{ loop.index0*32 }}px
+          #   {% endfor -%}
+          #   {% for g in temp_sensors %}
+          #   - type: state-icon
+          #     entity: {{ g.1 }}
+          #     style:
+          #       right: 0
+          #       bottom: 10px
+          #       margin-bottom: {{ loop.index0*32 }}px
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       "--paper-item-icon-color": white
+          #   - type: state-label
+          #     entity: {{ g.1 }}
+          #     title: {{ g.0 }}
+          #     prefix: "{{ g.0 }}: "
+          #     style:
+          #       transform: initial
+          #       font-size: 1em
+          #       line-height: 2em
+          #       bottom: 5px
+          #       right: 30px
+          #       margin-bottom: {{ loop.index0*32 }}px
+          #   {% endfor -%}
+
+          - type: picture-elements
+            card_mod:
+              class: hki
+            image: /local/images/model3.png
+            elements:
+              - type: state-icon
+                icon: mdi:car-key
+                entity: lock.lycklig_door_lock
+                tap_action: 
+                  action: toggle
+                style:
+                  '--paper-item-icon-color': blue
+                  left: 10%
+                  top: 89%
+              - type: state-label
+                entity: lock.lycklig_door_lock
+                style:
+                  color: Black
+                  left: 10%
+                  top: 97%
+              - type: state-icon
+                icon: mdi:car-door
+                entity: sensor.jag_windows
+                tap_action: more_info
+                style:
+                  '--paper-item-icon-color': blue
+                  left: 30%
+                  top: 89%
+              - type: state-label
+                entity: sensor.jag_windows
+                style:
+                  color: black
+                  left: 30%
+                  top: 97%
+              - type: state-icon
+                icon: mdi:security
+                entity: sensor.jag_alarm
+                tap_action: more_info
+                style:
+                  '--paper-item-icon-color': blue
+                  left: 50%
+                  top: 89%
+              - type: state-label
+                entity: sensor.jag_alarm
+                style:
+                  color: black
+                  left: 50%
+                  top: 97%
+              - type: state-icon
+                entity: sensor.lycklig_range_sensor
+                icon: mdi:gas-station
+                tap_action: more_info
+                style:
+                  '--paper-item-icon-color': blue
+                  left: 70%
+                  top: 89%
+              - type: state-label
+                entity: sensor.lycklig_range_sensor
+                style:
+                  color: black
+                  left: 70%
+                  top: 97%
+              - type: state-icon
+                icon: mdi:wrench
+                entity: sensor.jag_distance_to_service
+                tap_action:
+                  action: navigate
+                  navigation_path: /homekit-infused/menu
+                style:
+                  '--paper-item-icon-color': blue
+                  left: 90%
+                  top: 89%
+              - type: state-label
+                entity: sensor.jag_distance_to_service
+                style:
+                  color: black
+                  left: 90%
+                  top: 97%  

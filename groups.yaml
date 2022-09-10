@@ -251,8 +251,8 @@ home_presence:
 front_office_shades:
   name: Front Office Shades
   entities:
-    - cover.front_office_front
-    - cover.front_office_side
+    - input_number.front_office_cover_front
+    - input_number.front_office_cover_side
 
 living_room_shades:
   name: Living Room Shades

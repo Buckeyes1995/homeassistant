@@ -1,1 +1,19 @@
 - platform: hydrawise
+
+- platform: template
+  switches:
+    lycklig_sentry:
+      value_template: >-
+        {% if is_state('switch.lycklig_sentry_mode_switch', 'off') %}
+          on
+        {% else %}
+          off
+        {% endif %}
+      turn_on:
+        service: switch.toggle
+        data:
+          entity_id: switch.lycklig_sentry_mode_switch
+      turn_off:
+        service: switch.toggle
+        data:
+          entity_id: switch.lycklig_sentry_mode_switch
